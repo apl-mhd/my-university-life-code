@@ -1,0 +1,5 @@
+SELECT departments.DEPARTMENT_NAME, countries.COUNTRY_NAME
+
+FROM departments JOIN locations ON departments.LOCATION_ID = locations.LOCATION_ID
+JOIN countries on locations.COUNTRY_ID=countries.COUNTRY_ID
+WHERE(countries.REGION_ID = 4)

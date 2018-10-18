@@ -1,0 +1,12 @@
+SELECT FIRST_NAME,
+
+CASE
+	WHEN SALARY >1000 THEN 
+    concat(SALARY DIV 1000, ' Thousands ', IF((MOD(SALARY, 1000))>0,
+                                            
+   concat( MOD(SALARY,1000) div 100, ' Houndreds TK'),'TK'))
+    
+    
+    
+ END
+ FROM employees;

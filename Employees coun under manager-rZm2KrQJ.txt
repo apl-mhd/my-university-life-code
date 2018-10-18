@@ -1,0 +1,7 @@
+SELECT man.FIRST_NAME, COUNT(*)
+
+FROM employees e JOIN employees man ON e.MANAGER_ID = man.EMPLOYEE_ID
+
+GROUP BY man.FIRST_NAME
+
+ORDER BY count(*) ASC

@@ -1,0 +1,5 @@
+SELECT * FROM post 
+JOIN location ON location.id = post.locationid
+JOIN category ON post.categoryid = category.id 
+WHERE postid in (76)
+ORDER BY rand()  LIMIT 10;

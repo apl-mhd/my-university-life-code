@@ -1,0 +1,78 @@
+package summer2017;
+
+import java.util.ArrayList;
+
+public class Problem2 implements  Runnable {
+
+    static ArrayList<Integer> listNum = new ArrayList<>();
+
+
+    synchronized   void removeData(){
+
+        //for (int i=listNum.size()-1; i>=listNum.size()-5; i--){
+
+        int size =  listNum.size();
+        for (int i=size-1; i>=size-5; i--){
+            //System.out.println(i);
+
+            listNum.remove(i);
+            //System.out.print(listNum.remove(i));
+        }
+    }
+
+    @Override
+    public void run() {
+
+       // System.out.println("bangladesh");
+        removeData();
+    }
+
+
+    public static void main(String[] args) {
+
+        listNum.add(0);
+        listNum.add(1);
+        listNum.add(2);
+        listNum.add(3);
+        listNum.add(4);
+
+        listNum.add(5);
+        listNum.add(6);
+        listNum.add(7);
+        listNum.add(8);
+        listNum.add(9);
+        listNum.add(10);
+        listNum.add(11);
+        listNum.add(12);
+        listNum.add(13);
+        listNum.add(14);
+
+
+
+
+        Thread t1 = new  Thread(new Problem2());
+        Thread t2 = new  Thread(new Problem2());
+        Thread t3 = new  Thread(new Problem2());
+
+        t1.start();
+
+        t2.start();
+        t3.start();
+
+
+
+        try {
+            t1.join();
+            t2.join();
+           t3.join();
+        }
+        catch (InterruptedException e){
+
+            System.out.println(e);
+        }
+
+
+        System.out.println(listNum.size());
+
+    }
+}

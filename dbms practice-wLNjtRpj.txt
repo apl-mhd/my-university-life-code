@@ -1,0 +1,42 @@
+/*inner join*/
+
+SELECT employees.FIRST_NAME, departments.DEPARTMENT_ID, departments.DEPARTMENT_NAME
+FROM departments, employees
+
+WHERE employees.DEPARTMENT_ID = departments.DEPARTMENT_ID
+
+ORDER BY departments.DEPARTMENT_NAME ASC; 
+
+
+/*Employee manager relationship*/
+SELECT e1.FIRST_NAME,e1.EMPLOYEE_ID, e2.FIRST_NAME
+FROM employees e1, employees e2
+
+WHERE e1.MANAGER_ID = e2.EMPLOYEE_ID
+
+
+
+/*min max salary*/
+SELECT JOB_TITLE, max(MAX_SALARY), MIN(MIN_SALARY) FROM jobs GROUP BY JOB_TITLE ORDER BY MAX_SALARY DESC
+
+/*group function sum,count, max,min,avg*/
+SELECT FIRST_NAME,JOB_ID,  MAX(SALARY), MIN(SALARY), SUM(SALARY),AVG(SALARY),COUNT(JOB_ID) 
+FROM employees
+
+GROUP BY (JOB_ID)
+ORDER BY SALARY ASC
+
+
+/*group by salary sum*/
+SELECT DEPARTMENT_ID, SUM(SALARY), COUNT(DEPARTMENT_ID) 
+FROM employees 
+GROUP BY DEPARTMENT_ID
+ORDER BY SUM(SALARY) desc;
+
+
+/**group by**/
+SELECT employees.DEPARTMENT_ID, SUM(SALARY), COUNT(employees.DEPARTMENT_ID), departments.DEPARTMENT_NAME 
+FROM employees, departments
+WHERE employees.DEPARTMENT_ID = departments.DEPARTMENT_ID 
+GROUP BY employees.DEPARTMENT_ID
+ORDER BY SUM(SALARY) desc

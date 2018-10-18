@@ -1,0 +1,14 @@
+SELECT employees.JOB_ID, jobs.JOB_TITLE, FIRST_NAME,SALARY
+FROM employees
+
+JOIN jobs ON employees.JOB_ID  = jobs.JOB_ID
+
+WHERE employees.JOB_ID
+IN(
+SELECT employees.JOB_ID
+FROM employees
+GROUP BY employees.JOB_ID)
+
+GROUP BY employees.JOB_ID
+
+ORDER BY SALARY DESC

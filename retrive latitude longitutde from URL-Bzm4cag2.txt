@@ -1,0 +1,15 @@
+
+    public void latLongLink(String uri) {
+        // String link[] ="https://www.google.com.bd/maps/@23.7632913,90.3596005,17z".split("/");
+        String link[] = uri.split("/");
+        String b[] = link[4].split(",");
+        //      System.out.println(b.length);
+        String latarr[] = b[0].split("@");
+
+//        System.out.println(latarr[1]);
+
+        lati = Double.parseDouble(latarr[1]);
+        longi = Double.parseDouble(b[1]);
+        System.out.println(lati + " " + longi);
+
+    }

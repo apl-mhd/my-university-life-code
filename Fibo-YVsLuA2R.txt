@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+long long unsigned int dp[100];
+
+
+ long long unsigned int fib(int n){
+
+
+    if(dp[n] !=-1)
+        return dp[n];
+
+    return dp[n]= fib(n-1)+ fib(n-2);
+}
+
+int main() {
+
+    dp[0]=0;
+    dp[1]=1;
+
+
+    for (int i = 2; i <100 ; ++i) {
+
+        dp[i]=-1;
+
+    }
+
+
+    for (int i = 0; i <90 ; ++i) {
+
+        cout<<fib(i)<<endl;
+
+    }
+
+
+
+
+
+
+    return 0;
+}

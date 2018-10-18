@@ -1,0 +1,72 @@
+package spring2017;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
+
+import java.io.*;
+import java.util.ArrayList;
+
+public class Problem4 {
+
+
+
+    public static void main(String[] args) throws IOException {
+
+        FileReader fileReader = new FileReader("Section.txt");
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        ArrayList<Section> secList = new ArrayList<>();
+
+        String name = bufferedReader.readLine();
+
+        while (name!=null){
+
+            String temp[] = name.split("-");
+
+            secList.add(new Section(temp[0],temp[1],temp[2],temp[3]));
+
+            name =bufferedReader.readLine();
+        }
+
+        bufferedReader.close();
+        fileReader.close();
+
+        String a = ""+(10+20);
+        System.out.println(a);
+
+        FileWriter fileWriter =new FileWriter("Output.txt");
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+        for (Section i:secList){
+
+
+            int sum = Integer.parseInt(i.a)+Integer.parseInt(i.b)+Integer.parseInt(i.c);
+
+            String copy = i.course+"-"+sum+"\n";
+
+            bufferedWriter.write(copy);
+        }
+
+        bufferedWriter.close();
+        fileWriter.close();
+
+
+
+    }
+}
+
+
+class  Section{
+
+    String course,a,b,c;
+
+    public Section(String course, String a, String b, String c) {
+        this.course = course;
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+
+    @Override
+    public String toString() {
+        return course+"-"+a+"-"+b+"-"+c;
+    }
+}

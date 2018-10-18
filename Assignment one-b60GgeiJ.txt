@@ -1,0 +1,45 @@
+//Deadline: upto  11:55 PM on 30/06/2018 
+
+
+
+SELECT LOCATION_ID, STREET_ADDRESS,CITY, STATE_PROVINCE, POSTAL_CODE
+FROM locations
+
+
+2.2 = b
+SELECT LOCATION_ID, STREET_ADDRESS,CITY, STATE_PROVINCE, POSTAL_CODE,COUNTRY_ID
+FROM locations WHERE COUNTRY_ID ='CA' OR COUNTRY_ID = 'DE' or COUNTRY_ID ='UK'
+
+2.2 = e
+SELECT FIRST_NAME
+FROM employees WHERE FIRST_NAME like  'a%' AND FIRST_NAME LIKE '%n'
+
+
+2.2 = g
+
+SELECT FIRST_NAME, LAST_NAME
+FROM employees WHERE JOB_ID = 'AD_PRES' and SALARY >=23000
+
+
+2.3 = a
+
+SELECT FIRST_NAME,LAST_NAME, COMMISSION_PCT
+FROM employees WHERE JOB_ID = 'AD_PRES'  ORDER BY COMMISSION_PCT ASC, SALARY DESC
+
+3.1 = a
+
+SELECT lpad(concat (concat(FIRST_NAME,' '), LAST_NAME), 60,'*')
+FROM employees
+
+
+3.5 
+i)
+SELECT date_format(HIRE_DATE, '%D %M, %Y')  as 'Hire Date'
+FROM  `employees` 
+
+ii)
+SELECT date_format(HIRE_DATE, '%d %M, %Y.')  as 'Hire Date'
+FROM  `employees` 
+
+3.3  = b
+SELECT FIRST_NAME, datediff(CURDATE(), HIRE_DATE ) / 365 as 'Year' FROM employees

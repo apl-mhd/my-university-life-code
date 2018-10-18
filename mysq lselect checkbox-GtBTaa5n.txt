@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/45854354/i-want-to-search-filter-my-database-values-using-checkboxes-php-mysql
+https://stackoverflow.com/questions/907806/passing-an-array-to-a-query-using-a-where-clause

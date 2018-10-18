@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="mainbox">
+    <div class="box box1">
+
+    </div>
+    <div class="box box2">
+
+    </div>
+</div>
+
+<div class="cvlear"></div>
+
+    <div class="btn">
+        <div class="btngrp">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#">Link4</a>
+        </div>
+
+        <div class="serchclass">
+            <form>
+                <input type="search" name="search"  placeholder="type here">
+                <input type="submit" value="Search">
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.clear{
+    clear: both;
+}
+
+.mainbox{
+
+    width: 800px;
+    height: auto;
+    background: dodgerblue;
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+
+}
+
+.box1{
+    background: green;
+    float: left;
+}
+.box2{
+    background: darkcyan;
+float: right;
+}
+
+
+
+.btn{
+    width: 800px;
+    background: darkcyan;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.btn .btngrp{
+
+    float: left;
+
+}
+
+.btn a{
+
+    display: inline-block;
+    padding: 20px 30px;
+    color: #fff;
+    
+
+}
+.btn a:hover{
+
+    background: dodgerblue;
+    transition: 1s;
+}
+
+
+.serchclass{
+    float: right;
+    position: relative;
+    right: 10px;
+    top: 0px;
+}
+
+input{
+
+    padding: 20px;
+
+}

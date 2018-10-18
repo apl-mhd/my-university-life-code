@@ -1,0 +1,3 @@
+https://chrome.google.com/webstore/detail/gumshoe/mekpfngodchodemgmkhinohkfjefjeea?hl=en
+chrome-extension://mekpfngodchodemgmkhinohkfjefjeea/html/manage.html
+https://prnt.sc/

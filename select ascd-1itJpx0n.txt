@@ -1,0 +1,8 @@
+SELECT employees.EMPLOYEE_ID, employees.LAST_NAME, employees.DEPARTMENT_ID, employees.SALARY AS YEARLY_SALLARY FROM employees WHERE employees.DEPARTMENT_ID < 100 AND SALARY <6000 ORDER BY LAST_NAME DESC, SALARY ASC
+
+SELECT DATE_FORMAT(HIRE_DATE, '%D %M, %Y')
+FROM employees
+
+SELECT FIRST_NAME, round( datediff(CURRENT_DATE(), HIRE_DATE)/ 365,3) as 'no of years'
+
+FROM employees

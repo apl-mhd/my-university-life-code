@@ -1,0 +1,8 @@
+SELECT * FROM
+departments d
+WHERE EXISTS(
+    SELECT * FROM
+    employees e 
+    WHERE e.DEPARTMENT_ID = d.DEPARTMENT_ID
+    AND e.JOB_ID='it_prog'
+    )

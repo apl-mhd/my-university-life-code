@@ -1,0 +1,8 @@
+SELECT e1.FIRST_NAME, e2.FIRST_NAME
+FROM employees e1 
+JOIN employees e2 ON e2.MANAGER_ID = e1.EMPLOYEE_ID
+JOIN departments ON departments.DEPARTMENT_ID = e1.DEPARTMENT_ID
+
+JOIN locations ON locations.LOCATION_ID = departments.LOCATION_ID 
+
+AND locations.COUNTRY_ID = 'US'

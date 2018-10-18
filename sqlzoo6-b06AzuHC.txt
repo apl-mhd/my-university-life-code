@@ -1,0 +1,51 @@
+6.
+SELECT mdate, x.teamname as 'teamname 1', y.teamname as 'teamname 2'
+FROM ((game join eteam x  on  team1 = x.id )
+join eteam y on team2 = y.id)
+
+8.
+
+SELECT DISTINCT(player)
+FROM game
+  JOIN goal ON matchid = id
+    WHERE( (team1='GER' or team2='GER')  and teamid !='GER')
+   
+9.
+SELECT teamname, count(teamid)
+
+  FROM eteam JOIN goal ON id=teamid
+
+group by teamname
+
+10.
+SELECT stadium, count(teamid)
+from game join goal on id = matchid
+group by stadium
+
+11.
+select matchid,mdate,count(teamid)
+
+from game join goal on id= matchid
+
+and( team1 ='pol' or team2 ='pol')
+
+group by matchid
+
+
+12.
+
+SELECT matchid, mdate, count(teamid)
+
+from  game join  goal on  matchid  = id
+and teamid = 'ger'
+group by matchid
+
+
+13.
+select mdate, team1 ,(select  count(teamid)  from goal where matchid = id  and team1 =teamid) as score,
+
+team2, (select  count(teamid)  from goal where matchid = id  and team2 =teamid) as score
+
+from game
+
+order by mdate,  team1,team2

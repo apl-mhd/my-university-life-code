@@ -1,0 +1,8 @@
+SELECT SALARY
+FROM employees  e1 
+WHERE 4 = (SELECT COUNT(*)
+          
+           FROM employees e2 
+           WHERE e2.SALARY> e1.SALARY
+          
+          )

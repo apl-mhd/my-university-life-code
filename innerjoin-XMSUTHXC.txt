@@ -1,0 +1,1 @@
+SELECT employees.FIRST_NAME FROM employees INNER JOIN job_history ON employees.JOB_ID = job_history.JOB_ID

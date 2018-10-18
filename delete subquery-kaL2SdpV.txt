@@ -1,0 +1,7 @@
+DELETE FROM post   WHERE postid in(
+
+SELECT p.postid  FROM post as p
+
+WHERE  datediff(date_add(p.postdate, INTERVAL p.expire day), Curdate())<=0
+
+);

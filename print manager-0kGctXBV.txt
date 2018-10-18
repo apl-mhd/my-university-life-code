@@ -1,0 +1,9 @@
+SELECT DISTINCT( man.FIRST_NAME)
+FROM employees emp
+JOIN  employees man on
+ emp.MANAGER_ID = man.EMPLOYEE_ID
+
+
+SELECT FIRST_NAME 
+FROM employees
+WHERE EMPLOYEE_ID in ( SELECT MANAGER_ID FROM employees)

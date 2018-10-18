@@ -1,0 +1,2 @@
+SELECT countries.COUNTRY_NAME, locations.CITY FROM countries INNER JOIN locations ON countries.COUNTRY_ID = locations.COUNTRY_ID
+inner join

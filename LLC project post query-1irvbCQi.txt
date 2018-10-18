@@ -1,0 +1,2 @@
+select day(created_at), monthname(created_at), count(*)
+from post group by day(created_at), monthname(created_at)

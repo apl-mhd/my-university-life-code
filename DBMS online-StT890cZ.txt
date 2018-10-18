@@ -1,0 +1,26 @@
+CREATE TABLE customer(
+	ssn varchar(10) NOT null PRIMARY KEY,
+    firstname varchar(10),
+    lastname varchar(10),
+    email varchar(20) NOT null UNIQUE,
+    phonenumber varchar(11) not null UNIQUE
+);
+
+
+INSERT INTO `customer`(`ssn`, `firstname`, `lastname`, `email`, `phonenumber`) VALUES ("161036","apel","Mahmud","017100000","apl.mhd@gmail.com")
+
+
+
+CREATE TABLE invoice(
+	ordernumber int NOT null PRIMARY KEY,
+    price float,
+    quantity int DEFAULT 1,
+    ssn varchar(20),
+    orderdate date,
+    CONSTRAINT fk_const FOREIGN KEY (ssn) REFERENCES customer(ssn)
+
+	CHECK (prcie >=500)   
+ 
+);
+
+INSERT INTO `invoice`(`ordernumber`, `price`, `quantity`, `ssn`) VALUES (1,500,10, '161036')

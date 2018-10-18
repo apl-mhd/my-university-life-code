@@ -1,0 +1,8 @@
+SELECT employees.EMPLOYEE_ID,  FIRST_NAME
+FROM employees
+WHERE SALARY =(
+
+	
+    SELECT SALARY FROM
+    employees WHERE LAST_NAME = 'abel'
+)

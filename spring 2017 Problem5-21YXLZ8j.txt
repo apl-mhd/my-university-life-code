@@ -1,0 +1,65 @@
+package spring2017;
+
+import producerConsumer.Producer;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Problem5 extends JFrame implements ActionListener {
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        if(e.getSource()==button){
+
+            try {
+
+                 sum += Double.parseDouble(textField.getText());
+
+            }
+            catch (Exception f){
+                sum =sum;
+                JOptionPane.showMessageDialog(null, "Please enter valid number");
+            }
+
+            textField.setText("");
+
+           labelSum.setText("Total Sale:"+Double.toString(sum));
+        }
+    }
+
+
+    JLabel label, labelSum;
+    JButton button;
+    JTextField textField;
+
+
+    double sum=0.0;
+
+    Problem5(){
+
+        setLayout(new FlowLayout());
+
+        label = new JLabel("Enter sale");
+        textField = new JTextField(20);
+        button = new JButton("Record");
+        labelSum = new JLabel("Total sales: "+sum);
+
+
+        button.addActionListener(this);
+        add(label);add(textField); add(button); add(labelSum);
+
+        setSize(400,400);
+        setVisible(true);
+
+    }
+
+    public static void main(String[] args) {
+
+
+        new Problem5();
+
+    }
+}
