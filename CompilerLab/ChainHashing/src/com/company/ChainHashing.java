@@ -16,8 +16,10 @@ public class ChainHashing
 
 
     @Override
+
     public String toString() {
 
         return  name + " "+ type;
     }
+
 }

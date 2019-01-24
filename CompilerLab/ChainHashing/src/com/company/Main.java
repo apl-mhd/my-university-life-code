@@ -4,8 +4,15 @@ public class Main {
 
 
 
+
+
     public  static void   iterator(ChainHashing ob)
     {
+        if (ob.name == null){
+
+            System.out.println("noo data found");
+            return;
+        }
 
         System.out.println(ob);
 
@@ -21,13 +28,18 @@ public class Main {
     public  static void  insert(ChainHashing ob,String name, String type){
 
 
-        if (ob.next == null){
+        if (ob.name == null){
+            ob.name = name;
+            ob.type = type;
+            ob.next = null;
+            //System.out.println(ob.next);
+        }
+        else if (ob.next == null){
 
             ob.next = new ChainHashing();
             ob.next.name = name;
             ob.next.type = type;
             ob.next.next = null;
-            //System.out.println(ob.next);
         }
 
         else{
@@ -43,31 +55,31 @@ public class Main {
 
     }
 
-    public static void main(String[] args) {;
+    public static void main(String[] args) {
+
 
         ChainHashing[] dataTable = new ChainHashing[100];
-        dataTable[0] = new ChainHashing();
 
 
-        /*First level*/
-        dataTable[0].name = "Orko";
-        dataTable[0].type = "Orin";
-        dataTable[0].next = null;
+
+        for (int i=0; i<100; i++){
+
+            dataTable[i] =  new ChainHashing();
+
+
+        }
+
+        //System.out.println(dataTable[0].name);
+
+
+        iterator(dataTable[0]);
+
+
 
         insert(dataTable[0], "or", "ko");
         insert(dataTable[0], "ro", "ok");
         insert(dataTable[0], "oor", "koo");
-        
-        dataTable[0].next = dataTable[0].next.next;
-
-
-
-
-
-
-
-
-       iterator(dataTable[0]);
+        iterator(dataTable[0]);
 
 
 
