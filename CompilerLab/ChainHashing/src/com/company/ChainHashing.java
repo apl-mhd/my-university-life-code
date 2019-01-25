@@ -8,11 +8,12 @@ public class ChainHashing
 
     ChainHashing next;
 
-
     public  void  node(){
 
 
     }
+
+
 
 
     @Override
