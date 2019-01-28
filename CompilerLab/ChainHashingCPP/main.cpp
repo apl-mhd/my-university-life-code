@@ -183,7 +183,7 @@ void showALl(){
 }
 
 
-/*
+
 int hashKey(string key){
 
 
@@ -202,7 +202,7 @@ int hashKey(string key){
 
     return k % 50;
 }
-*/
+
 
 
 void show();
@@ -224,27 +224,6 @@ void stringSplit(string nameType){
 
 
 int main() {
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //  stringSplit(nameType);
-
-
-
-//cout<<name;
-    //cout<<name<<endl;
-    //cout<<type<<endl;
-
 
 
 
