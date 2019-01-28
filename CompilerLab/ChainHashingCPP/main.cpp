@@ -45,7 +45,70 @@ void newLine();
 
 int main() {
 
-    
+
+
+    bool decision = true;
+
+
+    while(decision){
+
+
+
+
+
+        cout<<"1. Insert :\n";
+        cout<<"2. Search :\n";
+        cout<<"3. Delete :\n";
+        cout<<"4. Show :\n";
+        cout<<"5. Update :\n";
+        cout<<"6. exit :\n";
+
+
+        int n;
+        cin>>n;
+
+
+
+
+        if(n ==1 ){
+
+            cout<<"****Insert****\n";
+            cout<<"Enter Name,Type: \n";
+
+
+
+        }
+        else if(n==2){
+
+            cout<<"****Search****\n";
+            cout<<"Enter Name: \n";
+
+        }
+        else if(n==3){
+            cout<<"****Delete****\n";
+            cout<<"Enter Name: \n";
+
+        }
+        else if(n==4){
+            cout<<"****Show****\n";
+            cout<<"Enter Name: \n";
+
+        }
+        else if(n==5){
+            cout<<"****Update****\n";
+            cout<<"Enter Name,UpdateType: \n";
+
+        } else{
+
+            decision = false;
+            cout<<"Invalid input \n";
+        }
+
+
+
+    }
+
+
     init();
     node *x = NULL;
 
