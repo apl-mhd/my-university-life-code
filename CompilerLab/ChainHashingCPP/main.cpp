@@ -18,12 +18,12 @@ typedef  list node;
 node *link[10];
 
 string nameType;
-string name="";
-string type="";
+string iname="";
+string itype="";
 
 void init(){
 
-    for (int i = 0; i <100; ++i) {
+    for (int i = 0; i <50; ++i) {
 
         //link[i] = new node;
         link[i] = NULL;
@@ -33,10 +33,94 @@ void init(){
 
 
 
+int  hashKey(int k,string name);
+void  insert(int k, string name, string type);
+void  dlt(int k, string name);
+void  search(int k, string name);
+void  update(int k, string name,string updateName);
+void showALl();
+void stringSplit(string nameType);
+void newLine();
 
 
-void  insert(int key, string name, string type)
+
+
+
+
+
+int main() {
+
+
+    /*for (char i = 'a'; i <='z' ; ++i) {
+
+        int x = i % 50;
+
+        cout<<i<<" = "<<x<<endl;
+
+    }
+
+    newLine();
+
+    for (char i = 'A'; i <='Z' ; ++i) {
+
+        int x = i % 50;
+
+        cout<<i<<" = "<<x<<endl;
+
+    }*/
+
+
+   /* cout<<hashKey("a");
+    cout<<hashKey("b");
+    cout<<hashKey("c");
+    cout<<hashKey("d");
+    cout<<hashKey("e");
+    cout<<hashKey("f");
+    cout<<hashKey("g");
+    cout<<hashKey("h");
+    cout<<hashKey("i");
+    cout<<hashKey("j");
+    cout<<hashKey("j");
+
+    cout<<endl;
+*/
+
+    init();
+    node *x = NULL;
+
+    insert(0,"a", "mahmud");
+    insert(0,"b", "mahmud");
+    insert(0,"c", "mahmud");
+
+    insert(1,"a", "mahmud");
+    insert(2,"b", "mahmud");
+    insert(3,"c", "mahmud");
+
+    insert(1,"ab", "mahmud");
+    insert(1,"ax", "mahmud");
+    insert(2,"ac", "mahmud");
+    insert(3,"ad", "mahmud");
+
+    //dlt(1,"a");
+    //search(1,"ax");
+
+
+    //dlt("orin");
+    showALl();
+
+}
+
+
+
+
+
+void  insert(int k, string name, string type)
 {
+
+
+    //int key = hashKey(name);
+   int key=k;
+
 
 
     node *temp = new  node();
@@ -59,13 +143,13 @@ void  insert(int key, string name, string type)
 
         root = link[key];
 
-      //  cout<<root<<endl;
+        //  cout<<root<<endl;
 
 
-      if(link[key]->name == name){
-          cout<<name<<" Already exists !"<<endl;
-          return;
-      }
+        if(link[key]->name == name){
+            cout<<name<<" Already exists !"<<endl;
+            return;
+        }
 
 
         while(root->next != NULL){
@@ -88,6 +172,7 @@ void  insert(int key, string name, string type)
 
 }
 
+
 int hashKey(string key){
 
 
@@ -100,7 +185,6 @@ int hashKey(string key){
 
 
         k +=key[i];
-        cout<<k<<endl;
         i++;
     }
 
@@ -110,60 +194,58 @@ int hashKey(string key){
 
 
 
-void  dlt(string nm){
 
-    int  key = hashKey(name);
+
+void  dlt(int k,string name){
+
+    //int  key = hashKey(name);
+
+    int key=k;
 
     node *temp,*root;
-    root = link[0];
+    root = link[key];
 
-    cout<<root<<endl;
-    cout<<link[0]<<endl;
 
 
     if (root == NULL) {
-        cout << "No " << nm << "found" << endl;
+        cout << "No " << name << "found" << endl;
     }
-    else if(link[0]->name == nm){
-        link[0] = link[0]->next;
+    else if(link[key]->name == name){
+        link[key] = link[key]->next;
 
     }
 
     else{
 
 
-        while(root->name != nm){
+        while(root->name != name){
 
 
             temp = root;
-            root = root->next;
 
             if(root->next == NULL)
                 break;
 
+            root = root->next;
 
         }
 
         temp->next = root->next;
 
 
-
-
     }
-
-
-
 
 }
 
 
 void showALl(){
 
-    for (int i = 0; i<2; ++i) {
+    for (int i = 0; i<50; ++i) {
 
         if (link[i] != NULL){
 
             node *temp = link[i];
+            cout<<"key("<<i<<"): ";
             while(temp != NULL)
             {
 
@@ -183,29 +265,82 @@ void showALl(){
 }
 
 
+void search(int k, string name){
 
-int hashKey(string key){
-
-
-
-    int i=0;
-    int k=0;
-
-    while(key[i] !='\0'){
+    int key = hashKey(name);
+    key = k;
 
 
 
-        k +=key[i];
-        cout<<k<<endl;
-    i++;
+        if (link[key] == NULL) {
+            cout << "No " << name << " found" << endl;
+        }
+        else{
+
+            node *temp = link[key];
+
+
+            cout<<"key("<<key<<"): ";
+            while(temp != NULL)
+            {
+
+                if(temp->name == name){
+                    cout<<"Name: "<<temp->name<<" Type: "<<temp->type<<endl;
+
+                    return;
+                }
+
+                temp = temp->next;
+
+            }
+
+            cout << "No " << name << " found" << endl;
+            cout<<endl;
+
+        }
+
+}
+
+void  update(int k, string name, string updateName){
+
+
+    int key = hashKey(name);
+    key = k;
+
+
+
+    if (link[key] == NULL) {
+        cout << "No " << name << " found" << endl;
+    }
+    else{
+
+        node *temp = link[key];
+
+
+        cout<<"key("<<key<<"): ";
+        while(temp != NULL)
+        {
+
+            if(temp->name == name){
+                cout<<"Name: "<<temp->name<<" Type: "<<temp->type<<endl;
+
+                return;
+            }
+
+            temp = temp->next;
+
+        }
+
+        cout << "No " << name << " found" << endl;
+        cout<<endl;
+
     }
 
-    return k % 50;
 }
 
 
 
-void show();
+
 
 
 
@@ -215,34 +350,12 @@ void stringSplit(string nameType){
     int len = nameType.length();
 
     int coma =  nameType.find(',');
-    name = nameType.substr(0,coma);
-    type = nameType.substr(coma+1,len);
-
+    iname = nameType.substr(0,coma);
+    itype = nameType.substr(coma+1,len);
 
 }
 
+void newLine(){
 
-
-int main() {
-
-
-
-    init();
-    node *x = NULL;
-
-    insert(0,"Apel", "mahmud");
-    insert(0,"orko", "mahmud");
-
-    //cout<<link[0]<<endl;
-    insert(0,"orin", "mahmud");
-
-
-
-    dlt("orin");
-
-
-    showALl();
-
-
-
+    cout<<endl;
 }
