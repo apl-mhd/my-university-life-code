@@ -43,48 +43,9 @@ void stringSplit(string nameType);
 void newLine();
 
 
-
-
-
-
-
 int main() {
 
-
-    /*for (char i = 'a'; i <='z' ; ++i) {
-
-        int x = i % 50;
-
-        cout<<i<<" = "<<x<<endl;
-
-    }
-
-    newLine();
-
-    for (char i = 'A'; i <='Z' ; ++i) {
-
-        int x = i % 50;
-
-        cout<<i<<" = "<<x<<endl;
-
-    }*/
-
-
-   /* cout<<hashKey("a");
-    cout<<hashKey("b");
-    cout<<hashKey("c");
-    cout<<hashKey("d");
-    cout<<hashKey("e");
-    cout<<hashKey("f");
-    cout<<hashKey("g");
-    cout<<hashKey("h");
-    cout<<hashKey("i");
-    cout<<hashKey("j");
-    cout<<hashKey("j");
-
-    cout<<endl;
-*/
-
+    
     init();
     node *x = NULL;
 
@@ -106,7 +67,13 @@ int main() {
 
 
     //dlt("orin");
+
+    update(1,"ax", "Integer");
+    update(1,"ab", "Integer");
+    update(1,"ab", "Char");
     showALl();
+
+
 
 }
 
@@ -249,7 +216,7 @@ void showALl(){
             while(temp != NULL)
             {
 
-                cout<<temp->name<<" ";
+                cout<<temp->name<<":"<<temp->type<<" ";
 
 
                 temp = temp->next;
@@ -301,7 +268,7 @@ void search(int k, string name){
 
 }
 
-void  update(int k, string name, string updateName){
+void  update(int k, string name, string updateType){
 
 
     int key = hashKey(name);
@@ -322,7 +289,8 @@ void  update(int k, string name, string updateName){
         {
 
             if(temp->name == name){
-                cout<<"Name: "<<temp->name<<" Type: "<<temp->type<<endl;
+                //cout<<"Name: "<<temp->name<<" Type: "<<temp->type<<endl;
+                temp->type = updateType;
 
                 return;
             }
