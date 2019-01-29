@@ -32,7 +32,6 @@ void init(){
 
 
 
-
 int  hashKey(int k,string name);
 void  insert(int k, string name, string type);
 void  dlt(int k, string name);
@@ -45,16 +44,9 @@ void newLine();
 
 int main() {
 
-
-
     bool decision = true;
 
-
-    while(decision){
-
-
-
-
+    /*while(decision){
 
         cout<<"1. Insert :\n";
         cout<<"2. Search :\n";
@@ -63,19 +55,13 @@ int main() {
         cout<<"5. Update :\n";
         cout<<"6. exit :\n";
 
-
         int n;
-        cin>>n;
-
-
-
+       // cin>>n;
 
         if(n ==1 ){
 
             cout<<"****Insert****\n";
             cout<<"Enter Name,Type: \n";
-
-
 
         }
         else if(n==2){
@@ -104,9 +90,7 @@ int main() {
             cout<<"Invalid input \n";
         }
 
-
-
-    }
+    }*/
 
 
     init();
@@ -129,14 +113,13 @@ int main() {
     //search(1,"ax");
 
 
-    //dlt("orin");
+    //dlt(0,"a");
+   //search(1,"ax");
 
-    update(1,"ax", "Integer");
-    update(1,"ab", "Integer");
-    update(1,"ab", "Char");
+    update(0,"c", "Integer");
+    //update(1,"ab", "Integer");
+   // update(1,"ab", "Char");
     showALl();
-
-
 
 }
 
@@ -147,11 +130,8 @@ int main() {
 void  insert(int k, string name, string type)
 {
 
-
     //int key = hashKey(name);
    int key=k;
-
-
 
     node *temp = new  node();
     node *root;
@@ -181,7 +161,6 @@ void  insert(int k, string name, string type)
             return;
         }
 
-
         while(root->next != NULL){
 
             root = root->next;
@@ -191,28 +170,21 @@ void  insert(int k, string name, string type)
                 return;
             }
 
-
         }
 
         root->next = temp;
 
-
     }
-
 
 }
 
 
 int hashKey(string key){
 
-
-
     int i=0;
     int k=0;
 
     while(key[i] !='\0'){
-
-
 
         k +=key[i];
         i++;
@@ -220,8 +192,6 @@ int hashKey(string key){
 
     return k % 50;
 }
-
-
 
 
 
@@ -235,13 +205,12 @@ void  dlt(int k,string name){
     node *temp,*root;
     root = link[key];
 
-
-
     if (root == NULL) {
-        cout << "No " << name << "found" << endl;
+        cout << "No key = '" << name << "' found" << endl;
     }
     else if(link[key]->name == name){
         link[key] = link[key]->next;
+        cout << name << " has successfully  delteted" << endl;
 
     }
 
@@ -250,21 +219,22 @@ void  dlt(int k,string name){
 
         while(root->name != name){
 
-
             temp = root;
 
-            if(root->next == NULL)
-                break;
+            if(root->next == NULL){
+
+                cout << "No " << name << "found" << endl;
+
+                return;
+            }
 
             root = root->next;
-
         }
 
+        cout << name << " has successfully  delteted" << endl;
+
         temp->next = root->next;
-
-
     }
-
 }
 
 
@@ -278,18 +248,11 @@ void showALl(){
             cout<<"key("<<i<<"): ";
             while(temp != NULL)
             {
-
                 cout<<temp->name<<":"<<temp->type<<" ";
-
-
                 temp = temp->next;
-
             }
-
             cout<<endl;
-
         }
-
 
     }
 }
@@ -301,6 +264,7 @@ void search(int k, string name){
     key = k;
 
 
+    cout<<"search result :"<<endl;
 
         if (link[key] == NULL) {
             cout << "No " << name << " found" << endl;
@@ -308,6 +272,7 @@ void search(int k, string name){
         else{
 
             node *temp = link[key];
+
 
 
             cout<<"key("<<key<<"): ";
@@ -338,6 +303,7 @@ void  update(int k, string name, string updateType){
     key = k;
 
 
+    cout<<"Update:"<<endl;
 
     if (link[key] == NULL) {
         cout << "No " << name << " found" << endl;
@@ -370,16 +336,10 @@ void  update(int k, string name, string updateType){
 }
 
 
-
-
-
-
-
 void stringSplit(string nameType){
 
 
     int len = nameType.length();
-
     int coma =  nameType.find(',');
     iname = nameType.substr(0,coma);
     itype = nameType.substr(coma+1,len);

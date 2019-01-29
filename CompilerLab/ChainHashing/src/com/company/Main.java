@@ -3,6 +3,9 @@ package com.company;
 public class Main {
 
 
+    static ChainHashing[] dataTable = new ChainHashing[100];
+
+
 
 
 
@@ -25,26 +28,28 @@ public class Main {
     }
 
 
-    public  static void  insert(ChainHashing ob,String name, String type){
+    public  static void  insert(String name, String type){
 
 
-        if (ob.name == null){
-            ob.name = name;
-            ob.type = type;
-            ob.next = null;
+        if (dataTable[0]== null){
+
+            dataTable[0] = new ChainHashing();
+            dataTable[0].name = name;
+            dataTable[0].type = type;
+            dataTable[0].next = null;
             //System.out.println(ob.next);
         }
-        else if (ob.next == null){
+        else {
 
-            ob.next = new ChainHashing();
-            ob.next.name = name;
-            ob.next.type = type;
-            ob.next.next = null;
-        }
+            ChainHashing temp =  dataTable[0];
+            while (temp.next != null){
 
-        else{
-            ob = ob.next;
-            insert(ob,name,type);
+                temp = temp.next;
+            }
+            temp.next= new ChainHashing();
+            temp.next.name = name;
+            temp.next.type = type;
+            temp.next.next = null;
         }
 
     }
@@ -120,23 +125,24 @@ public class Main {
 
 
 
-
-        ChainHashing[] dataTable = new ChainHashing[100];
-
-
-
-        for (int i=0; i<100; i++){
-            dataTable[i] =  new ChainHashing();
-
-        }
+        insert("or", "ko");
+        insert("Mamun", "Hasan");
 
 
 
+        System.out.println(dataTable[0]);
+        System.out.println(dataTable[0].next);
+
+        dataTable[0] = dataTable[0].next;
+
+        
 
 
 
 
-        iterator(dataTable[0]);
+
+
+        /*iterator(dataTable[0]);
         insert(dataTable[0], "or", "ko");
         insert(dataTable[0], "ro", "ok");
         insert(dataTable[0], "oor", "koo");
@@ -147,7 +153,7 @@ public class Main {
         delete(dataTable[0], "or");
 
         iterator(dataTable[0]);
-
+*/
 
 
 
