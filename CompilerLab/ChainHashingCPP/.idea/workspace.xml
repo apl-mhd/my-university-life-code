@@ -12,13 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e788d2f-d0cb-4ac8-886c-3ea30f44c271" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChainHashing/out/production/ChainHashing/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashing/out/production/ChainHashing/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChainHashing/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashing/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -53,11 +47,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="305" column="26" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="26" />
+            <state relative-caret-position="190">
+              <caret line="266" column="9" selection-start-line="266" selection-start-column="5" selection-end-line="266" selection-end-column="9" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#684#1567#0" />
+                <element signature="e#1268#1781#0" />
               </folding>
             </state>
           </provider>
@@ -72,6 +66,13 @@
       <find>found</find>
       <find>dlt</find>
       <find>searc</find>
+      <find>menub</find>
+      <find>hash</find>
+      <find>sho</find>
+      <find>upda</find>
+      <find>u</find>
+      <find>s</find>
+      <find>show</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,12 +142,13 @@
       <workItem from="1548649672120" duration="8400000" />
       <workItem from="1548691287388" duration="543000" />
       <workItem from="1548736051557" duration="181000" />
-      <workItem from="1548741464695" duration="1844000" />
+      <workItem from="1548741464695" duration="1990000" />
+      <workItem from="1548753475634" duration="7214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45974000" />
+    <option name="totallyTimeSpent" value="53334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -166,7 +168,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.055421688" />
       <window_info anchor="bottom" id="CMake" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.1313253" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.21927711" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -183,11 +185,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="305" column="26" selection-start-line="305" selection-start-column="26" selection-end-line="305" selection-end-column="26" />
+        <state relative-caret-position="190">
+          <caret line="266" column="9" selection-start-line="266" selection-start-column="5" selection-end-line="266" selection-end-column="9" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#684#1567#0" />
+            <element signature="e#1268#1781#0" />
           </folding>
         </state>
       </provider>
