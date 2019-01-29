@@ -55,6 +55,8 @@ public class Main {
     }
 
 
+
+
     public  static void  search(ChainHashing ob, String name){
 
 
@@ -83,33 +85,56 @@ public class Main {
     }
 
 
-    public  static void  delete(ChainHashing ob, String name){
+    public  static void  delete( String name){
 
 
-        if(ob.name == name ){
+        ChainHashing temp = dataTable[0];
+        ChainHashing prev=null;
 
-            ob = ob.next;
-            System.out.println("data delete");
-             return;
+        if (dataTable[0].name == name){
 
-        }
-
-        else if (ob.name ==null || ob.next == null) {
-
-            System.out.println("No Data Found");
-
+            dataTable[0] = dataTable[0].next;
+            System.out.println(name + "delete successfully /n");
             return;
         }
 
 
-        else
-        {
 
-            ob = ob.next;
-            search(ob, name);
+        while (temp.name !=name){
+
+            prev = temp;
+
+
+            if (temp.next == null){
+
+                System.out.println("data not found");
+                return;
+            }
+
+
+            temp = temp.next;
+
 
         }
 
+        prev.next = temp.next;
+
+        System.out.println(name + " delete successfully ");
+
+    }
+
+    public  static void showAll(){
+
+        ChainHashing temp = dataTable[0];
+
+        while (temp != null){
+
+                System.out.println(temp.name);
+
+            temp = temp.next;
+
+
+        }
     }
 
 
@@ -127,33 +152,18 @@ public class Main {
 
         insert("or", "ko");
         insert("Mamun", "Hasan");
+        insert("orin", "mahmud");
 
 
+        showAll();
 
-        System.out.println(dataTable[0]);
-        System.out.println(dataTable[0].next);
+        delete("or");
 
-        dataTable[0] = dataTable[0].next;
+        showAll();
 
-        
-
-
+      
 
 
-
-
-        /*iterator(dataTable[0]);
-        insert(dataTable[0], "or", "ko");
-        insert(dataTable[0], "ro", "ok");
-        insert(dataTable[0], "oor", "koo");
-
-
-        System.out.println("_______");
-
-        delete(dataTable[0], "or");
-
-        iterator(dataTable[0]);
-*/
 
 
 

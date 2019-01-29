@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c628b373-37ac-4ea1-8f27-8b09892e32a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/ChainHashing/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChainHashing/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/CMakeFiles/Progress/1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/ChainHashingCPP" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/ChainHashingCPP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +36,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
+            <state relative-caret-position="558">
+              <caret line="163" column="6" lean-forward="true" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
               <folding>
                 <element signature="method#search#0;class#Main#0" />
-                <element signature="method#delete#0;class#Main#0" />
                 <element signature="method#change#0;class#Main#0" />
               </folding>
             </state>
@@ -54,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Node.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding>
                 <element signature="e#129#130#0" expanded="true" />
                 <element signature="e#156#157#0" expanded="true" />
@@ -123,7 +119,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548741125658" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548786595735" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -175,11 +171,12 @@
       <workItem from="1548394782104" duration="3358000" />
       <workItem from="1548431256643" duration="23000" />
       <workItem from="1548736292933" duration="1615000" />
+      <workItem from="1548785630637" duration="1026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21429000" />
+    <option name="totallyTimeSpent" value="22455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -195,17 +192,16 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.16144578" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32891566" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32891566" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -215,6 +211,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info active="true" anchor="right" x="21" y="390" width="1398" height="119" id="Run" order="9" visible="true" weight="0.3505007" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,17 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="e#129#130#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ChainHashing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -296,13 +282,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding>
+            <element signature="e#129#130#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="137" column="8" selection-start-line="137" selection-start-column="8" selection-end-line="137" selection-end-column="8" />
+        <state relative-caret-position="558">
+          <caret line="163" column="6" lean-forward="true" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
           <folding>
             <element signature="method#search#0;class#Main#0" />
-            <element signature="method#delete#0;class#Main#0" />
             <element signature="method#change#0;class#Main#0" />
           </folding>
         </state>
