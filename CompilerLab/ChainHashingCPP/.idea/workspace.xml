@@ -11,7 +11,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e788d2f-d0cb-4ac8-886c-3ea30f44c271" name="Default Changelist" comment="" />
+    <list default="true" id="5e788d2f-d0cb-4ac8-886c-3ea30f44c271" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashing/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +53,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3688">
-              <caret line="388" column="18" selection-start-line="388" selection-start-column="18" selection-end-line="388" selection-end-column="18" />
+            <state relative-caret-position="252">
+              <caret line="236" column="34" selection-start-line="236" selection-start-column="34" selection-end-line="236" selection-end-column="34" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#1268#1781#0" />
               </folding>
             </state>
           </provider>
@@ -70,6 +78,7 @@
       <find>u</find>
       <find>s</find>
       <find>show</find>
+      <find>delet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -141,14 +150,20 @@
       <workItem from="1548736051557" duration="181000" />
       <workItem from="1548741464695" duration="1990000" />
       <workItem from="1548753475634" duration="7687000" />
+      <workItem from="1548817638659" duration="263000" />
+      <workItem from="1548818679945" duration="213000" />
+      <workItem from="1548819467854" duration="483000" />
+      <workItem from="1548820751982" duration="543000" />
+      <workItem from="1548860475836" duration="188000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53807000" />
+    <option name="totallyTimeSpent" value="55497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -181,11 +196,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3688">
-          <caret line="388" column="18" selection-start-line="388" selection-start-column="18" selection-end-line="388" selection-end-column="18" />
+        <state relative-caret-position="252">
+          <caret line="236" column="34" selection-start-line="236" selection-start-column="34" selection-end-line="236" selection-end-column="34" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1268#1781#0" />
           </folding>
         </state>
       </provider>

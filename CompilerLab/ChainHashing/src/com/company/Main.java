@@ -8,6 +8,10 @@ public class Main {
     static ChainHashing[] dataTable = new ChainHashing[100];
 
 
+    static String[] nameTypeArr;
+    static String iname;
+   static String itype;
+
 
 
 
@@ -15,7 +19,7 @@ public class Main {
 
     public  static void  insert(String name, String type){
 
-        int key =0;
+        int key = hashValue(name);
 
         if (dataTable[key]== null){
 
@@ -23,7 +27,7 @@ public class Main {
             dataTable[key].name = name;
             dataTable[key].type = type;
             dataTable[key].next = null;
-            //System.out.println(ob.next);
+
         }
         else {
 
@@ -43,37 +47,11 @@ public class Main {
 
 
 
-    public  static void  search(ChainHashing ob, String name){
-
-
-         if(ob.name == name ){
-
-            System.out.println("data found");
-            //  return;
-
-        }
-
-       else if (ob.name ==null || ob.next == null) {
-            System.out.println("No Data Found");
-
-           // return;
-        }
-
-
-        else
-            {
-
-            ob = ob.next;
-            search(ob, name);
-
-        }
-
-    }
 
 
     public  static void  delete( String name){
 
-        int key =0;
+        int key = hashValue(name);
 
         ChainHashing temp = dataTable[key];
         ChainHashing prev=null;
@@ -83,7 +61,7 @@ public class Main {
 
             System.out.println("Empty node no "+ name +" found");
         }
-       else if (dataTable[key].name == name){
+       else if (dataTable[key].name.equals(name)){
 
             dataTable[key] = dataTable[key].next;
             System.out.println(name + " delete successfully ");
@@ -93,7 +71,7 @@ public class Main {
 
 
        else {
-            while (temp.name != name) {
+            while (!temp.name.equals(name)) {
 
                 prev = temp;
 
@@ -120,9 +98,6 @@ public class Main {
 
     public  static void showAll(){
 
-        int key =0;
-
-
 
         for (int i =0; i<10; i++){
 
@@ -144,28 +119,49 @@ public class Main {
                 }
             }
 
-            System.out.println();
-
 
         }
+        System.out.println();
 
 
     }
 
-    public  static  void  update(String name, String type){
+    public  static  void  update(){
 
 
-        int key =0;
+
+
+
+
+
+        Scanner in = new Scanner(System.in);
+        String name,type;
+
+
+
+        System.out.println("Enter Name :");
+
+        name =in.nextLine();
+
+        System.out.println("Enter Type :");
+
+        type =in.nextLine();
+
+        int key = hashValue(name);
 
         ChainHashing temp = dataTable[key];
         ChainHashing prev=null;
+
+
+
+
 
 
         if (dataTable[key] == null){
 
             System.out.println("Empty node  "+ name +" not found");
         }
-        else if (dataTable[key].name == name){
+        else if (dataTable[key].name.equals(name)){
 
             dataTable[key].type = type;
             System.out.println(name + " update successfully ");
@@ -175,9 +171,7 @@ public class Main {
 
 
         else {
-            while (temp.name != name) {
-
-
+            while (!temp.name.equals(name)  ) {
 
 
                 if (temp.next == null) {
@@ -186,11 +180,7 @@ public class Main {
                     return;
                 }
 
-
-
                 temp = temp.next;
-
-
             }
 
             temp.type = type;
@@ -202,10 +192,10 @@ public class Main {
     }
 
 
-    public  void  search(String name){
+    public  static void search(String name){
 
 
-        int key =0;
+        int key = hashValue(name);
 
         ChainHashing temp = dataTable[key];
 
@@ -215,7 +205,7 @@ public class Main {
 
             System.out.println("Empty node,  "+ name +" not found");
         }
-        else if (dataTable[key].name == name){
+        else if (dataTable[key].name.equals(name)){
 
 
             System.out.println(name +" : " +dataTable[key].name);
@@ -225,7 +215,7 @@ public class Main {
 
 
         else {
-            while (temp.name != name) {
+            while (!temp.name.equals(name)) {
 
 
                 if (temp.next == null) {
@@ -252,6 +242,7 @@ public class Main {
 
     public  static  int hashValue(String name){
 
+
         int n=0;
 
         char arr[] = name.toCharArray();
@@ -259,60 +250,106 @@ public class Main {
         for (int i = 0; i<name.length(); i++){
 
             n+=arr[i];
-            System.out.println(arr[i]);
+            //System.out.println(arr[i]);
         }
 
 
         return n%10;
 
-/*
-        char ch = 'a';
-        int ascii = ch;
-        // You can also cast char to int
-        int castAscii = (int) ch;*/
 
     }
 
 
-
-
-
-    public static void main(String[] args) {
-
-
-        Scanner in = new Scanner(System.in);
-
-        String namType = in.next();
+    public  static  void stringSplit(String namType){
 
         String[] nameTypeArr = namType.split(",");
-        String name = nameTypeArr[0]; // 004
-        String type = nameTypeArr[1]; // 034556
-
-
-        System.out.println(name + type);
-
-
-
-
-        hashValue("apel");
-
-
-        insert("or", "ko");
-        insert("Mamun", "Hasan");
-        insert("orin", "mahmud");
-        insert("orix", "mahmud");
-
-
-
-        update("or","Alien");
-
-
-
-
-
+         iname = nameTypeArr[0]; // 004
+         itype = nameTypeArr[1]; // 034556
 
 
 
 
     }
+
+
+    public  static  void  menubar() {
+
+
+        while (true) {
+
+            System.out.println("1. Insert :");
+            System.out.println("2. Search :");
+            System.out.println("3. Delete :");
+            System.out.println("4. Show :");
+            System.out.println("5. Update :");
+            System.out.println("6. exit :");
+
+            Scanner in = new Scanner(System.in);
+
+
+            String namType;
+
+
+            String n;
+
+            n = in.nextLine();
+
+
+            if (n.equals("1") == true) {
+
+
+                namType = in.nextLine();
+
+                stringSplit(namType);
+
+                System.out.println(iname+" "+itype);
+
+                insert(iname, itype);
+
+            } else if (n.equals("2") == true) {
+
+                iname = in.nextLine();
+
+                search(iname);
+
+            } else if (n.equals("3") == true) {
+
+                iname = in.nextLine();
+
+                delete(iname);
+
+            } else if (n.equals("4") == true) {
+
+
+                showAll();
+
+
+            } else if (n.equals("5") == true) {
+
+
+                update();
+
+            } else if (n.equals("6") == true) {
+
+                return;
+
+
+            } else {
+                System.out.println("Invalid input");
+            }
+
+
+        }
+    }
+
+        public static void main (String[]args){
+
+
+        menubar();
+
+
+        }
+
+
+
 }

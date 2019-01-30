@@ -234,7 +234,7 @@ void  dlt(){
     root = link[key];
 
     if (root == NULL) {   //if link[key] == null then return
-        cout << "No key = '" << iname << "' found" << endl;
+        cout  << iname << "' Not Found" << endl;
     }
     else if(link[key]->name == iname){  //if at first node name found link[key] = link[key]->next
         link[key] = link[key]->next;

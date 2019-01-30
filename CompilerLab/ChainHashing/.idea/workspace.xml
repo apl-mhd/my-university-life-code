@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c628b373-37ac-4ea1-8f27-8b09892e32a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChainHashing/com/company/ChainHashing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChainHashing/com/company/ChainHashing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChainHashing/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChainHashing/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/ChainHashing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/ChainHashing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/ChainHashingCPP" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/cmake-build-debug/ChainHashingCPP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,10 +41,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="277" lean-forward="true" selection-start-line="277" selection-end-line="277" />
+            <state relative-caret-position="245">
+              <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
               <folding>
+                <element signature="method#delete#0;class#Main#0" />
+                <element signature="method#showAll#0;class#Main#0" />
+                <element signature="method#update#0;class#Main#0" />
                 <element signature="method#search#0;class#Main#0" />
+                <element signature="e#3166#3247#1" />
+                <element signature="e#3293#3373#1" />
+                <element signature="method#hashValue#0;class#Main#0" />
+                <element signature="method#stringSplit#0;class#Main#0" />
+                <element signature="method#menubar#0;class#Main#0" />
               </folding>
             </state>
           </provider>
@@ -68,6 +79,16 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>search</find>
+      <find>dlt</find>
+      <find>update</find>
+      <find>string</find>
+      <find>show</find>
+      <find>strin</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -120,7 +141,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548789286951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548864646513" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -172,12 +193,16 @@
       <workItem from="1548394782104" duration="3358000" />
       <workItem from="1548431256643" duration="23000" />
       <workItem from="1548736292933" duration="1615000" />
-      <workItem from="1548785630637" duration="3504000" />
+      <workItem from="1548785630637" duration="3551000" />
+      <workItem from="1548816569770" duration="1989000" />
+      <workItem from="1548819255011" duration="166000" />
+      <workItem from="1548820031736" duration="402000" />
+      <workItem from="1548860951692" duration="2339000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24933000" />
+    <option name="totallyTimeSpent" value="29876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -212,7 +237,7 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info active="true" anchor="right" x="21" y="390" width="1398" height="119" id="Run" order="9" visible="true" weight="0.3505007" />
+      <window_info active="true" anchor="right" x="21" y="390" width="1398" height="119" id="Run" order="9" visible="true" weight="0.34978542" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +294,20 @@
     </option>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/InnerClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/ChainHashing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -280,26 +319,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ChainHashing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/InnerClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="277" lean-forward="true" selection-start-line="277" selection-end-line="277" />
+        <state relative-caret-position="245">
+          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
           <folding>
+            <element signature="method#delete#0;class#Main#0" />
+            <element signature="method#showAll#0;class#Main#0" />
+            <element signature="method#update#0;class#Main#0" />
             <element signature="method#search#0;class#Main#0" />
+            <element signature="e#3166#3247#1" />
+            <element signature="e#3293#3373#1" />
+            <element signature="method#hashValue#0;class#Main#0" />
+            <element signature="method#stringSplit#0;class#Main#0" />
+            <element signature="method#menubar#0;class#Main#0" />
           </folding>
         </state>
       </provider>
