@@ -12,14 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e788d2f-d0cb-4ac8-886c-3ea30f44c271" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../test/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../test/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/BIke.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/Splendor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashing/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChainHashing/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashing/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../test/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,10 +51,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="236" column="34" selection-start-line="236" selection-start-column="34" selection-end-line="236" selection-end-column="34" />
+            <state relative-caret-position="105">
+              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#550#1295#0" />
+                <element signature="e#3174#3368#0" />
+                <element signature="e#3373#4462#0" />
+                <element signature="e#4465#4939#0" />
+                <element signature="e#4942#5652#0" />
+                <element signature="e#5654#6444#0" />
+                <element signature="e#6447#6880#0" />
+                <element signature="e#6662#6697#0" />
+                <element signature="e#7609#7777#0" />
               </folding>
             </state>
           </provider>
@@ -67,7 +74,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>cout</find>
-      <find>no</find>
       <find>found</find>
       <find>dlt</find>
       <find>searc</find>
@@ -79,6 +85,15 @@
       <find>s</find>
       <find>show</find>
       <find>delet</find>
+      <find>50</find>
+      <find>stringSplit</find>
+      <find>emptyOrNot</find>
+      <find>menubar();</find>
+      <find>no</find>
+      <find>nameEmpty(iname)</find>
+      <find>empty</find>
+      <find>is empty</find>
+      <find>insert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,11 +170,12 @@
       <workItem from="1548819467854" duration="483000" />
       <workItem from="1548820751982" duration="543000" />
       <workItem from="1548860475836" duration="188000" />
+      <workItem from="1549376014763" duration="8229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55497000" />
+    <option name="totallyTimeSpent" value="63726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -184,11 +200,22 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
-      <window_info anchor="right" x="21" y="244" width="1398" height="411" id="Run" order="4" weight="0.36194563" />
+      <window_info active="true" anchor="right" x="21" y="244" width="1398" height="411" id="Run" order="4" visible="true" weight="0.36194563" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>447</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
@@ -196,10 +223,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="236" column="34" selection-start-line="236" selection-start-column="34" selection-end-line="236" selection-end-column="34" />
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#550#1295#0" />
+            <element signature="e#3174#3368#0" />
+            <element signature="e#3373#4462#0" />
+            <element signature="e#4465#4939#0" />
+            <element signature="e#4942#5652#0" />
+            <element signature="e#5654#6444#0" />
+            <element signature="e#6447#6880#0" />
+            <element signature="e#6662#6697#0" />
+            <element signature="e#7609#7777#0" />
           </folding>
         </state>
       </provider>

@@ -5,26 +5,28 @@
 #include <climits>
 using namespace std;
 
-struct  list{
+struct  SymbolInfo{
 
     string name;
     string type;
 
-    list  *next;
+    SymbolInfo  *next;
 
 };
 
-typedef  list node;
+typedef  SymbolInfo node;
 
-node *link[50];
+int MAX = 50;
 
 string inameType;
 string iname="";
 string itype="";
 
+node *link[50];
+
 void init(){
 
-    for (int i = 0; i <50; ++i) {
+    for (int i = 0; i <MAX; ++i) {
 
         //link[i] = new node;
         link[i] = NULL;
@@ -39,7 +41,9 @@ void  dlt();
 void  search();
 void  update();
 void showALl();
-void stringSplit(string nameType);
+int stringSplit(string nameType);
+bool emptyOrNot();
+bool nameEmpty( string nm);
 void newLine();
 
 
@@ -55,45 +59,45 @@ void menubar(){
         cout<<"4. Show :\n";
         cout<<"5. Update :\n";
         cout<<"6. exit :\n";
-        cout<<"Enter :"<<endl;
+        cout<<"Select option from menu :"<<endl;
 
-        char n;
+        string n;
         cin>>n;
 
-        if(n =='1' ){
+        if(n == "1" ){
 
             insert();
 
         }
 
-        else if(n == '2'){
+        else if(n == "2"){
 
             search();
 
         }
-        else if(n == '3'){
+        else if(n == "3"){
 
             dlt();
 
         }
-        else if(n == '4'){
+        else if(n == "4"){
 
             showALl();
 
 
         }
-        else if(n == '5'){
+        else if(n == "5"){
             update();
 
         }
-        else if (n == '6'){
+        else if (n == "6"){
 
-            return;
+            exit(0);
 
 
         }
         else{
-            cout<<"Invalid input \n";
+            cout<<"Invalid input, enter again \n";
         }
 
     }
@@ -109,69 +113,62 @@ int main() {
     menubar();
 
 
-
-    /*
-    node *x = NULL;
-
-    insert(0,"a", "mahmud");
-    insert(0,"b", "mahmud");
-    insert(0,"c", "mahmud");
-
-    insert(1,"a", "mahmud");
-    insert(2,"b", "mahmud");
-    insert(3,"c", "mahmud");
-
-    insert(1,"ab", "mahmud");
-    insert(1,"ax", "mahmud");
-    insert(2,"ac", "mahmud");
-    insert(3,"ad", "mahmud");
-
-    //dlt(1,"a");
-    //search(1,"ax");
-
-
-    //dlt(0,"a");
-   //search(1,"ax");
-
-    update(0,"c", "Integer");
-    //update(1,"ab", "Integer");
-   // update(1,"ab", "Char");
-    showALl();
-*/
 }
 
 
 
 
 
-void  insert()
-{
+void  insert() {
 
 
-    cout<<"****Insert****\n";
-    cout<<"Enter Name,Type: \n";
-    cin>>inameType;
+    cout << "****Insert****\n";
+    cout << "Enter Name,Type: \n";
+    cin >> inameType;
 
 
-    stringSplit(inameType);
+    int count = stringSplit(inameType);
+
+    int len = inameType.length();  //string length
+    int comma = inameType.find(',');  //find comma ',' index other it return -1
+
+
+    if (count == 0) {  // id donot have any comma then return
+
+        cout << "comma separator not found, enter again : " << endl;
+
+        return;
+
+
+    } else if (count > 1) {
+
+        cout << "More than one comma found, enter again : " << endl;
+
+        return;
+
+    } else {
+
+        iname = inameType.substr(0, comma);
+        itype = inameType.substr(comma + 1, len);
+
 
 
     int key = hashKey(iname);
 
 
-    node *temp = new  node();
+    node *temp = new node();
     node *root;
 
-    if (link[key] == NULL){ // if link[key] == Null
+    if (link[key] == NULL) { // if link[key] == Null
 
         temp->name = iname;
         temp->type = itype;
         temp->next = NULL;   //assign next  == null
         link[key] = temp;   //assign link[key] = newly crated node;
 
-    }
+        cout <<"hashkey(" <<key <<") -> " << iname<< ":"<<itype<<" insert successfully"<<endl;
 
-    else{                         //if not link[key] == null
+    } else {                         //if not link[key] == null
 
         temp->name = iname;
         temp->type = itype;
@@ -182,25 +179,28 @@ void  insert()
         //  cout<<root<<endl;
 
 
-        if(link[key]->name == iname){               //if startin link[key] == iname then return
-            cout<<iname<<" Already exists !"<<endl;
+        if (link[key]->name == iname) {               //if startin link[key] == iname then return
+            cout <<"'"<< iname << "' Already exists !" << endl;
             return;
         }
 
-        while(root->next != NULL){      //iterate until last node->next !=null
+        while (root->next != NULL) {      //iterate until last node->next !=null
 
             root = root->next;           //like root++
 
-            if(root->name == iname){    //if already exists then return from loop;
-                cout<<iname<<" Already exists !"<<endl;
+            if (root->name == iname) {    //if already exists then return from loop;
+                cout << iname << " Already exists !" << endl;
                 return;
             }
 
         }
 
         root->next = temp;   //if no name found then temp assin to last node->next = temp;
+        cout <<"hashkey(" <<key <<") -> " << iname<< ":"<<itype<<" insert successfully"<<endl;
 
     }
+
+}
 
 }
 
@@ -222,6 +222,11 @@ int hashKey(string key){
 
 
 void  dlt(){
+
+    if(emptyOrNot() == false){
+        cout<<"List is empty"<<endl<<endl;
+        return;
+    }
 
     cout<<"****Delete****\n";
     cout<<"Enter Name: \n";
@@ -266,9 +271,19 @@ void  dlt(){
 
 void showALl(){
 
+
+
+    if(emptyOrNot() == false){
+
+        cout<<"List is empty"<<endl<<endl;
+        return;
+    }
+
     cout<<"****Show All****\n";
 
-    for (int i = 0; i<50; ++i) {  //this is simple
+
+
+    for (int i = 0; i<MAX; ++i) {  //this is simple
 
         if (link[i] != NULL){   //if link[key] == null then exit from if condition
 
@@ -293,6 +308,11 @@ void showALl(){
 void search(){
 
 
+    if(emptyOrNot() == false){
+        cout<<"List is empty"<<endl<<endl;
+        return;
+    }
+
     cout<<"****Search****\n";
     cout<<"Enter Name: \n";
     cin>>iname;
@@ -303,7 +323,7 @@ void search(){
     cout<<"search result :"<<endl;
 
         if (link[key] == NULL) {
-            cout << "No " << iname << " found" << endl;
+            cout << " '" << iname << "' not found" << endl;
         }
         else{
 
@@ -323,7 +343,8 @@ void search(){
 
             }
 
-            cout << "No " << iname << " found" << endl;
+            cout << " '" << iname << "' not found" << endl;
+
             cout<<endl;
 
         }
@@ -333,9 +354,17 @@ void search(){
 void  update(){
 
 
+    if(emptyOrNot() == false){
+        cout<<"List is empty"<<endl<<endl;
+        return;
+    }
+
+
     cout<<"****Update****\n";
     cout<<"Enter Name: \n";
     cin>>iname;
+
+
 
     cout<<"Enter UpdateType: \n";
     cin>>itype;
@@ -347,7 +376,8 @@ void  update(){
 
 
     if (link[key] == NULL) {
-        cout << "No " << iname << " found" << endl;
+        cout << " '" << iname << "' not found" << endl;
+        return;
     }
     else{
 
@@ -358,7 +388,7 @@ void  update(){
         {
 
             if(temp->name == iname){  //if name found then assign type=itype and return from loop
-                cout<<"Name: "<<temp->name<<" Type: "<<itype<<"Updated Successfully "<<endl;
+                cout<<"Name: "<<temp->name<<" Type: "<<itype<<" Updated Successfully "<<endl;
                 temp->type = itype;
 
                 return;
@@ -368,7 +398,8 @@ void  update(){
 
         }
 
-        cout << "No " << iname << " found" << endl;
+        cout << " '" << iname << "' not found" << endl;
+
         cout<<endl;
 
     }
@@ -376,29 +407,57 @@ void  update(){
 }
 
 
-void stringSplit(string nameType){
+int stringSplit(string nameType){
 
 
     int len = nameType.length();  //string length
     int comma =  nameType.find(',');  //find comma ',' index other it return -1
+    int count =0;
 
-    if(comma < 0){  // id donot have any comma then return
 
-        cout<<"comma separator not found, enter again : "<<endl;
+    for(int i=0; i<len; i++){
 
-        menubar();
-
+        if(nameType[i] == ',')
+            count++;
 
     }
-    else {
 
-        iname = nameType.substr(0, comma);
-        itype = nameType.substr(comma + 1, len);
-    }
+    return  count;
+
 
 }
 
 void newLine(){
 
     cout<<endl;
+}
+
+bool emptyOrNot(){
+
+    for (int i = 0; i <MAX ; ++i) {
+
+        if(link[i] != NULL)
+            return true;
+
+    }
+
+    return  false;
+
+}
+
+bool nameEmpty( string nm){
+
+    cout<<nm;
+
+
+    for (int i = 0; i <MAX ; ++i) {
+
+        if(link[i]->name == nm)
+            return true;
+
+    }
+
+    return false;
+
+
 }

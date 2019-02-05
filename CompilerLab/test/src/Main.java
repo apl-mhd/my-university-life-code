@@ -1,8 +1,10 @@
+import java.util.function.BiConsumer;
+
 public class Main {
 
 
-    String name;
 
+    String name;
 
    public void change(Main x){
 
@@ -14,23 +16,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Main ob = new Main();
-        Main ob2 = new Main();
 
-        System.out.println(ob);
+        Splendor ob = new Splendor();
 
-        ob.name="ork";
+        ob.run();
 
 
-        ob.change(ob);
-
-        System.out.println(ob.name);
-
-        ob2 =ob;
-
-
-
-        System.out.println(ob2);
 
     }
 }
