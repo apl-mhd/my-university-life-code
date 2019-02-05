@@ -22,14 +22,14 @@ string inameType;
 string iname="";
 string itype="";
 
-node *link[50];
+node *SymbolTable[50];
 
 void init(){
 
     for (int i = 0; i <MAX; ++i) {
 
-        //link[i] = new node;
-        link[i] = NULL;
+        //SymbolTable[i] = new node;
+        SymbolTable[i] = NULL;
     }
 }
 
@@ -159,27 +159,27 @@ void  insert() {
     node *temp = new node();
     node *root;
 
-    if (link[key] == NULL) { // if link[key] == Null
+    if (SymbolTable[key] == NULL) { // if SymbolTable[key] == Null
 
         temp->name = iname;
         temp->type = itype;
         temp->next = NULL;   //assign next  == null
-        link[key] = temp;   //assign link[key] = newly crated node;
+        SymbolTable[key] = temp;   //assign SymbolTable[key] = newly crated node;
 
         cout <<"hashkey(" <<key <<") -> " << iname<< ":"<<itype<<" insert successfully"<<endl;
 
-    } else {                         //if not link[key] == null
+    } else {                         //if not SymbolTable[key] == null
 
         temp->name = iname;
         temp->type = itype;
         temp->next = NULL;
 
-        root = link[key];         //store link[key] starting location
+        root = SymbolTable[key];         //store SymbolTable[key] starting location
 
         //  cout<<root<<endl;
 
 
-        if (link[key]->name == iname) {               //if startin link[key] == iname then return
+        if (SymbolTable[key]->name == iname) {               //if startin SymbolTable[key] == iname then return
             cout <<"'"<< iname << "' Already exists !" << endl;
             return;
         }
@@ -236,13 +236,13 @@ void  dlt(){
 
 
     node *temp,*root;
-    root = link[key];
+    root = SymbolTable[key];
 
-    if (root == NULL) {   //if link[key] == null then return
+    if (root == NULL) {   //if SymbolTable[key] == null then return
         cout  << iname << "' Not Found" << endl;
     }
-    else if(link[key]->name == iname){  //if at first node name found link[key] = link[key]->next
-        link[key] = link[key]->next;
+    else if(SymbolTable[key]->name == iname){  //if at first node name found SymbolTable[key] = SymbolTable[key]->next
+        SymbolTable[key] = SymbolTable[key]->next;
         cout << iname << " has successfully  delteted" << endl;
 
     }
@@ -285,9 +285,9 @@ void showALl(){
 
     for (int i = 0; i<MAX; ++i) {  //this is simple
 
-        if (link[i] != NULL){   //if link[key] == null then exit from if condition
+        if (SymbolTable[i] != NULL){   //if SymbolTable[key] == null then exit from if condition
 
-            node *temp = link[i];
+            node *temp = SymbolTable[i];
             cout<<"keyIndex("<<i<<"): ";
             while(temp != NULL)
             {
@@ -322,12 +322,12 @@ void search(){
 
     cout<<"search result :"<<endl;
 
-        if (link[key] == NULL) {
+        if (SymbolTable[key] == NULL) {
             cout << " '" << iname << "' not found" << endl;
         }
         else{
 
-            node *temp = link[key];
+            node *temp = SymbolTable[key];
 
             cout<<"hashKey("<<key<<"): ";
             while(temp != NULL)
@@ -375,13 +375,13 @@ void  update(){
 
 
 
-    if (link[key] == NULL) {
+    if (SymbolTable[key] == NULL) {
         cout << " '" << iname << "' not found" << endl;
         return;
     }
     else{
 
-        node *temp = link[key];
+        node *temp = SymbolTable[key];
 
         cout<<"key("<<key<<"): "<<endl;
         while(temp != NULL)
@@ -436,7 +436,7 @@ bool emptyOrNot(){
 
     for (int i = 0; i <MAX ; ++i) {
 
-        if(link[i] != NULL)
+        if(SymbolTable[i] != NULL)
             return true;
 
     }
@@ -452,7 +452,7 @@ bool nameEmpty( string nm){
 
     for (int i = 0; i <MAX ; ++i) {
 
-        if(link[i]->name == nm)
+        if(SymbolTable[i]->name == nm)
             return true;
 
     }
