@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/apelmahmud/Desktop/Developers/UIUlife/CompilerLab/regularExpression/main.cpp
+iostream
+-
+cstdio
+-
+cstring
+-
+cctype
+-
+climits
+-
+

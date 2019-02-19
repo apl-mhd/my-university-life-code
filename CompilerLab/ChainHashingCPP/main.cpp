@@ -151,6 +151,14 @@ void  insert() {
         iname = inameType.substr(0, comma);
         itype = inameType.substr(comma + 1, len);
 
+        if(iname == itype){
+
+            cout<<"Name and Type can not be same\n"<<endl;
+            return;
+
+        }
+
+
 
 
     int key = hashKey(iname);
@@ -179,7 +187,7 @@ void  insert() {
         //  cout<<root<<endl;
 
 
-        if (SymbolTable[key]->name == iname) {               //if startin SymbolTable[key] == iname then return
+        if (SymbolTable[key]->name == iname) {               //if start in SymbolTable[key] == iname then return
             cout <<"'"<< iname << "' Already exists !" << endl;
             return;
         }
@@ -189,7 +197,7 @@ void  insert() {
             root = root->next;           //like root++
 
             if (root->name == iname) {    //if already exists then return from loop;
-                cout << iname << " Already exists !" << endl;
+                cout <<"'"<< iname << "' Already exists !" << endl;
                 return;
             }
 
@@ -217,9 +225,6 @@ int hashKey(string key){
 
     return k % 10;
 }
-
-
-
 
 void  dlt(){
 
@@ -268,14 +273,13 @@ void  dlt(){
     }
 }
 
-
 void showALl(){
-
 
 
     if(emptyOrNot() == false){
 
         cout<<"List is empty"<<endl<<endl;
+
         return;
     }
 
@@ -288,7 +292,7 @@ void showALl(){
         if (SymbolTable[i] != NULL){   //if SymbolTable[key] == null then exit from if condition
 
             node *temp = SymbolTable[i];
-            cout<<"keyIndex("<<i<<"): ";
+            cout<<"keyIndex("<<i<<")-> ";
             while(temp != NULL)
             {
                 cout<<temp->name<<":"<<temp->type<<", ";
@@ -303,7 +307,6 @@ void showALl(){
 
     cout<<endl;
 }
-
 
 void search(){
 
@@ -375,7 +378,7 @@ void  update(){
 
 
 
-    if (SymbolTable[key] == NULL) {
+    if (SymbolTable[key] == NULL) {    //if SymbolTable[key] == empty then return from this
         cout << " '" << iname << "' not found" << endl;
         return;
     }
@@ -406,14 +409,11 @@ void  update(){
 
 }
 
-
 int stringSplit(string nameType){
-
 
     int len = nameType.length();  //string length
     int comma =  nameType.find(',');  //find comma ',' index other it return -1
     int count =0;
-
 
     for(int i=0; i<len; i++){
 
@@ -421,9 +421,7 @@ int stringSplit(string nameType){
             count++;
 
     }
-
     return  count;
-
 
 }
 
@@ -440,18 +438,14 @@ bool emptyOrNot(){
             return true;
 
     }
-
     return  false;
-
 }
 
 bool nameEmpty( string nm){
 
     cout<<nm;
 
-
     for (int i = 0; i <MAX ; ++i) {
-
         if(SymbolTable[i]->name == nm)
             return true;
 

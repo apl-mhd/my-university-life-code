@@ -12,6 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e788d2f-d0cb-4ac8-886c-3ea30f44c271" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../regularExpression/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../regularExpression/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ChainHashingCPP.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ChainHashingCPP" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -46,20 +51,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
+            <state relative-caret-position="259">
+              <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#550#1295#0" />
-                <element signature="e#3174#3368#0" />
-                <element signature="e#3373#4462#0" />
-                <element signature="e#4465#4939#0" />
-                <element signature="e#4942#5652#0" />
-                <element signature="e#5654#6444#0" />
-                <element signature="e#6447#6880#0" />
-                <element signature="e#6882#6916#0" />
-                <element signature="e#6662#6697#0" />
-                <element signature="e#7609#7777#0" />
+                <element signature="e#116#197#1" />
+                <element signature="e#319#444#0" />
+                <element signature="e#651#1431#0" />
               </folding>
             </state>
           </provider>
@@ -91,6 +89,7 @@
       <find>is empty</find>
       <find>insert</find>
       <find>link</find>
+      <find>nameEmpty</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,15 +166,18 @@
       <workItem from="1548819467854" duration="483000" />
       <workItem from="1548820751982" duration="543000" />
       <workItem from="1548860475836" duration="188000" />
-      <workItem from="1549376014763" duration="8599000" />
+      <workItem from="1549376014763" duration="9017000" />
+      <workItem from="1549419219318" duration="3855000" />
+      <workItem from="1550575844189" duration="281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64096000" />
+    <option name="totallyTimeSpent" value="68650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -196,7 +198,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
-      <window_info active="true" anchor="right" x="21" y="244" width="1398" height="411" id="Run" order="4" visible="true" weight="0.36194563" />
+      <window_info anchor="right" x="21" y="244" width="1398" height="411" id="Run" order="4" weight="0.36194563" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,8 +209,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>447</line>
-          <option name="timeStamp" value="2" />
+          <line>121</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -219,20 +221,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="220" lean-forward="true" selection-start-line="220" selection-end-line="220" />
+        <state relative-caret-position="259">
+          <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#550#1295#0" />
-            <element signature="e#3174#3368#0" />
-            <element signature="e#3373#4462#0" />
-            <element signature="e#4465#4939#0" />
-            <element signature="e#4942#5652#0" />
-            <element signature="e#5654#6444#0" />
-            <element signature="e#6447#6880#0" />
-            <element signature="e#6882#6916#0" />
-            <element signature="e#6662#6697#0" />
-            <element signature="e#7609#7777#0" />
+            <element signature="e#116#197#1" />
+            <element signature="e#319#444#0" />
+            <element signature="e#651#1431#0" />
           </folding>
         </state>
       </provider>
