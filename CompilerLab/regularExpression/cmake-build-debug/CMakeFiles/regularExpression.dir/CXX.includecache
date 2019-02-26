@@ -17,4 +17,14 @@ cctype
 -
 climits
 -
+algorithm
+-
+stack
+-
+queue
+-
+map
+-
+vector
+-
 
