@@ -19,9 +19,6 @@ void rexpression(){
     int i=0;
 
 
-
-
-
     int at = name.find('@');
 
     //cout<<at;
@@ -35,8 +32,6 @@ void rexpression(){
         cout<<"Not Accept\n";
         return;
     }
-
-
 
         while(name[i] != '@'){
 
@@ -58,9 +53,6 @@ void rexpression(){
             cout<<"Not Accept\n ";
             return;
         }
-
-
-
 
         i = i+1;
 
@@ -104,8 +96,6 @@ void rexpression(){
 
 
 
-
-
 }
 
 int main() {
@@ -115,8 +105,6 @@ int main() {
 
         rexpression();
     }
-
-
 
     return 0;
 }
