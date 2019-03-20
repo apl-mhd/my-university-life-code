@@ -9,7 +9,6 @@ struct  SymbolInfo{
 
     string name;
     string type;
-
     SymbolInfo  *next;
 
 };
@@ -413,7 +412,7 @@ int stringSplit(string nameType){
 
     int len = nameType.length();  //string length
     int comma =  nameType.find(',');  //find comma ',' index other it return -1
-    int count =0;
+    int count = 0;
 
     for(int i=0; i<len; i++){
 

@@ -12,8 +12,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42b831c1-70f2-406f-840c-369817a3591c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../CoinChange/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/ChainHashing.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/out/production/ChainHashing/com/company/ChainHashing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/out/production/ChainHashing/com/company/InnerClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/out/production/ChainHashing/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/out/production/ChainHashing/com/company/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/src/com/company/ChainHashing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/src/com/company/InnerClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/src/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashing/src/com/company/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChainHashingCPP/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../ChainHashingCPP/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/regularExpression.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/regularExpression.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/regularExpression.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/regularExpression.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/regularExpression" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/regularExpression" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -31,13 +47,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="-2208">
+              <caret line="134" column="107" lean-forward="true" selection-start-line="134" selection-start-column="107" selection-end-line="134" selection-end-column="107" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#1237#1806#0" />
-                <element signature="e#2101#2788#0" />
-                <element signature="e#2439#3169#0" />
               </folding>
             </state>
           </provider>
@@ -49,6 +62,8 @@
     <findStrings>
       <find>men</find>
       <find>menu</find>
+      <find>size</find>
+      <find>cout</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,13 +85,11 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -113,15 +126,23 @@
       <workItem from="1550576185011" duration="4668000" />
       <workItem from="1550589662107" duration="4936000" />
       <workItem from="1550970762315" duration="3458000" />
-      <workItem from="1551187216220" duration="3009000" />
+      <workItem from="1551187216220" duration="3416000" />
+      <workItem from="1551191869115" duration="883000" />
+      <workItem from="1551202788477" duration="598000" />
+      <workItem from="1551235158232" duration="5080000" />
+      <workItem from="1551782156461" duration="151000" />
+      <workItem from="1551959023493" duration="220000" />
+      <workItem from="1551982564610" duration="47000" />
+      <workItem from="1553013914551" duration="203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16071000" />
+    <option name="totallyTimeSpent" value="23660000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -129,8 +150,8 @@
       <window_info anchor="bottom" id="CMake" order="0" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Messages" order="3" visible="true" weight="0.13855422" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.31445783" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.18554217" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
@@ -142,7 +163,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info active="true" anchor="right" id="Run" order="4" visible="true" weight="0.26680973" />
+      <window_info anchor="right" id="Run" order="4" weight="0.26680973" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,13 +175,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="-2208">
+          <caret line="134" column="107" lean-forward="true" selection-start-line="134" selection-start-column="107" selection-end-line="134" selection-end-column="107" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#1237#1806#0" />
-            <element signature="e#2101#2788#0" />
-            <element signature="e#2439#3169#0" />
           </folding>
         </state>
       </provider>

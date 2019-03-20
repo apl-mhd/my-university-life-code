@@ -23,12 +23,8 @@ void startWith();
 int  main(){
 
 
-    float intNumber =  0E5 ;
-    cout<<intNumber<<endl;
-
 
     menubar();
-
 
     return  0;
 
@@ -199,6 +195,7 @@ void variable(){
 
 
 }
+int flag=1;
 
 void  floating(){
 
@@ -270,27 +267,57 @@ void  exponent(){
 
     int size = intNumber.length();
     int c=0,e=0,plus=0,minus=0;
-    cout<<size<<endl;
+
 
     if((intNumber[size-1] == '.')){
-        cout<<"Not Accept aa: "<<intNumber<<endl;
+        cout<<"Not Accept : "<<intNumber<<endl;
         return;
     }
+
+    for (int j = 0; j <size; ++j) {
+
+
+
+    }
+
+
 
 
     for (int i = 0; i <size; ++i) {
 
 
-        if (intNumber[i] == '.')
+        if (intNumber[i] == '.'){
+                if(!('0' <=  intNumber[i+1] && intNumber[i+1] <= '9')) {
+                    //cout<<"Not Accept : "<<intNumber<<endl;
+                    //return;
+                    flag =0;
+
+
+                }
+
             c++;
+        }
 
         if (intNumber[i] == 'E')
             e++;
 
-        if (intNumber[i] == '+')
+        if (intNumber[i] == '+') {
+
+            if (intNumber[i-1] !='E'){
+                cout<<"Not Accept \n";
+                return;
+            }
+
             plus++;
+        }
 
         if (intNumber[i] == '-')
+
+            if (intNumber[i-1] !='E'){
+                cout<<"Not Accept \n";
+                return;
+            }
+
             minus++;
 
 
@@ -303,7 +330,7 @@ void  exponent(){
 
         if ( ('0' <=  intNumber[i] && intNumber[i] <= '9') || intNumber[i] == '+' || intNumber[i] == '-' || intNumber[i] == '.' || intNumber[i] == 'E' ){
 
-            continue;
+
 
         } else{
 
@@ -315,11 +342,20 @@ void  exponent(){
     }
 
 
-    if(c== 0 || e == 0 || plus ==0 || minus == 0){
-        cout<<"Not Accept : "<<intNumber<<endl;
+
+
+
+    if((c== 1 && e == 1 && plus ==1 && flag == 1) || (c== 1 && e == 1 &&  minus == 1 && flag ==1)){
+        cout<<" Accept : "<<intNumber<<endl;
     }
+    else if(c ==1  && e==1 && flag ==1){
+
+        cout<<" Accept : "<<intNumber<<endl;
+    }
+
+
     else
-        cout<<"Accept : "<<intNumber<<endl;
+        cout<<" Not Accept : "<<intNumber<<endl;
 
 
 
