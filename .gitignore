@@ -1,0 +1,10 @@
+cmake-build-debug
+CMakeLists.txt
+.idea
+.xml
+.DS_Store
+.idea
+venv
+.egg
+__pycache__
+
