@@ -1,8 +1,8 @@
+
 class Employee:
 
 
     def __init__(self, first, last, pay):
-
         self.first = first
         self.last = last
         self.email = first +'.'+last +'@' + 'mail.com'
@@ -10,11 +10,9 @@ class Employee:
 
 
     def info(self):
-
         print('%s %s %s %d' %(self.first, self.last, self.email, self.pay))
 
     def apply_raise(self):
-
         self.pay = int(self.pay * 1.5)
 
 
