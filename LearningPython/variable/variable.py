@@ -79,6 +79,7 @@ name = 'Tylor Jarina'
 
 print(name[2:-1])
 
+'''
 num = int(input("Please enter number"))
 
 
@@ -86,7 +87,7 @@ if num % 2 ==0:
     print("This is even number")
 
 else:
-    print('Not even')
+    print('Not even') '''
 
 
 x =1
@@ -94,4 +95,36 @@ x =1
 while x in range(10):
     print(x)
     x +=1
+
+print('')
+
+x = 1
+
+while True:
+    print("out put : {x}".format(x =x))
+    x += 1
+    if x > 10:
+        break
+
+title = "Apple INC."
+
+
+for i in  title:
+    print(i)
+
+print('List Tutorial')
+print('____________________\n')
+
+cars =  ['Honda','Ferari','BMW','Toyota','Lexus']
+
+print(cars)
+print(cars[0])
+print(cars[1])
+print(cars[2])
+
+print(cars[-1])
+
+
+
+
 
