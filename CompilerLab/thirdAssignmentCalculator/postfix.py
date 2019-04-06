@@ -7,8 +7,10 @@ bracket = ['(',')']
 pm = ['+','-']
 md = ['*','/']
 
-stackOprator = [] #+,-*,/
-stackOprand = []
+#stackOprator = [] #+,-*,/
+#stackOprand = []
+
+
 
 
 alphabet = {
@@ -20,10 +22,12 @@ alphabet = {
 
 
 
-
+#a*b+b/c
 
 
 def inFixToPostFix(expr):
+    stackOprator = [] #+,-*,/
+    stackOprand = []
 
     for i in  expr:
 
@@ -39,6 +43,18 @@ def inFixToPostFix(expr):
                         break
                     else:
                         stackOprand.append(stackOprator.pop())
+
+
+            if i != ')':
+                stackOprator.append(i)
+
+
+
+        elif (len(stackOprator) > 0) and  ((i in pm and (stackOprator[-1] in pm)) or (i in md and (stackOprator[-1] in md))):
+                stackOprand.append(stackOprator.pop())
+                stackOprator.append(i)
+
+
 
         else:
             stackOprator.append(i)
@@ -58,7 +74,7 @@ def ans(result):
 
 
 
-
+'''
 with open('input.txt','r') as obr:
     x= obr.readlines()
 
@@ -69,14 +85,18 @@ with open('input.txt','r') as obr:
 
             ans(i)
 
+'''
+
+
+print(inFixToPostFix('(A*B)+(C/D)'))
+
+
+#print(inFixToPostFix('1*2+3'))
 
 
 
 
 
-
-
-#abc++dc+*
 #abc+dc+*+
 #abc+dc+*+
 #abc+dc+*+
