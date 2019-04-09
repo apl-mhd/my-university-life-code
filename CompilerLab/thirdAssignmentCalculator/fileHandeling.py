@@ -105,3 +105,12 @@ print(obj.infixToPostfix(exp))
 
 
 
+'''
+1;
+3*(4+5);
+x=3*(4+5);
+y=5;
+x+2*y;
+z=x+2*y;
+
+'''

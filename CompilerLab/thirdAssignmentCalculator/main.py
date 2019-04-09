@@ -40,28 +40,26 @@ def infixEval(p):
 
         if  i in helper.pm or i in helper.md:
 
+            two = int(resultQ.pop())
+            one = int(resultQ.pop())
 
             if i == '+':
-                two = int(resultQ.pop())
-                one = int(resultQ.pop())
+
                 result = one + two
 
 
             elif i == '-':
-                two = int(resultQ.pop())
-                one = int(resultQ.pop())
+
                 result = one - two
 
 
             elif i == '*':
-                two = int(resultQ.pop())
-                one = int(resultQ.pop())
+
                 result = one * two
 
 
             elif i == '/':
-                two = int(resultQ.pop())
-                one = int(resultQ.pop())
+
                 result = one / two
 
             resultQ.append(result)
@@ -91,15 +89,15 @@ def writeTofile(result):
 
 with open('input.txt','r') as robj:
 
-    abc=''
+
 
     for i in  robj:
-
+        abc = ''
         temp = i[0:len(i)-1]    #remove for new line
         #print(temp)
 
         if temp.startswith(eq):
-            print(temp[0:2])
+            #print(temp[0:2])
             abc = temp[0]       #strore x,y,z
             temp =  temp[2:]    # ex. remove x=
 
@@ -109,21 +107,20 @@ with open('input.txt','r') as robj:
             break
 
         else:
-            print(abc)
-            x = helper.inFixToPostFix(temp[0:len(temp)-1])
-            print(x)
+            #print(abc)
+            x = helper.inFixToPostFix(temp[0:len(temp)-1]) #remove semicolone
+            #print(x)
             #x = ''.join(x)
             x = infixEval(x)
-            print(x)
+            #print(x)
 
             if len(abc) > 0:
                 helper.alphabetSum[abc] = x
 
-            #yn = print('D you want to save it to file:')
+            yn = input('D you want to save it to file:')
 
-            #if yn =='y':
-                #print(x)
-            writeTofile(str(x)+'\n')
+            if yn =='y':
+                writeTofile(str(x)+'\n')
 
 
 print(helper.alphabetSum)
