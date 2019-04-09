@@ -1,10 +1,7 @@
 import postfix as  helper
 
 
-if 'a' <'z':
-    print('thank you')
-else:
-    print('axxx')
+
 
 '''
 alphabetSum = {
@@ -18,14 +15,19 @@ az =['a','b','c','d','e','f','g','h','i','j', 'k', 'l','m','n','o','p','q','r','
 
 
 
-eq =['a=','b=','c=','d=','e=','f=','g=','h=','i=','j=', 'k=', 'l=','m=','n=','o=','p=','q=','r=','s=','t=','u=','v=', 'w=', 'x=','y=','z=']
+
+eq =('a=','b=','c=','d=','e=','f=','g=','h=','i=','j=', 'k=', 'l=','m=','n=','o=','p=','q=','r=','s=','t=','u=','v=', 'w=', 'x=','y=','z=')
+
+
+name ='a='
+
+#print(name.startswith(eq))
 
 
 
 
 p = helper.inFixToPostFix('a+b+c')
 
-print(p)
 
 def infixEval(p):
     resultQ =[]
@@ -57,9 +59,52 @@ def infixEval(p):
 
 
 
+#print(infixEval(p))
+
+
+def writeTofile(result):
+    with open('output.txt', 'a') as wobj:
+        wobj.write(result)
 
 
 
+
+with open('input.txt','r') as robj:
+
+    abc=''
+
+    for i in  robj:
+
+        temp = i[0:len(i)-1]    #remove for new line
+        print(temp)
+
+        if temp.startswith(eq):
+            print(temp[0:2])
+            abc = temp[0]       #strore x,y,z
+            temp =  temp[2:]    # ex. remove x=
+
+        if temp.endswith(';')  == False:
+            print('erro ; semicolon missing')
+            print(i)
+            break
+
+        else:
+            print(abc)
+            x = helper.inFixToPostFix(temp[0:len(temp)-1])
+            #x = ''.join(x)
+            x = infixEval(x)
+
+            if len(abc) > 0:
+                helper.alphabetSum[abc] =x
+            #print(x)
+            writeTofile(str(x)+'\n')
+
+
+
+
+
+
+print(helper.alphabetSum)
 
 
 

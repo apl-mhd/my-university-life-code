@@ -91,7 +91,7 @@ with open('input.txt','r') as obr:
 '''
 
 
-print(inFixToPostFix('(A*B)+(C/D)'))
+#print(inFixToPostFix('(A*B)+(C/D)'))
 
 
 #print(inFixToPostFix('1*2+3'))
