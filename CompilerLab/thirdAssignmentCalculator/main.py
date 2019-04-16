@@ -101,9 +101,9 @@ with open('input.txt','r') as robj:
             abc = temp[0]       #strore x,y,z
             temp =  temp[2:]    # ex. remove x=
 
-        if temp.endswith(';')  == False:
-            print('erro ; semicolon missing')
-            print(i)
+        if temp.endswith(';')  == False:           #check semicolone at the last
+            print('error ; semicolon missing')
+            #print(i)
             break
 
         else:

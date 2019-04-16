@@ -32,12 +32,12 @@ def inFixToPostFix(expr):
 
         if i not  in operator and i not in bracket:
 
-            if i in alphabetSum:
+            if i in alphabetSum:                            #check i =a-z
                 stackOprand.append(alphabetSum[i])
             else:
                 stackOprand.append(i)
 
-        elif i in pm and  len(stackOprator) != 0 and stackOprator[-1] in md or i in ')':
+        elif i in pm and  len(stackOprator) != 0 and stackOprator[-1] in md or i in ')':  #if i=+,- and stack top *,/ or i=)
 
             while(len(stackOprator) != 0):
 
@@ -52,7 +52,7 @@ def inFixToPostFix(expr):
                 stackOprator.append(i)
 
 
-
+                    #if same precedence
         elif (len(stackOprator) > 0) and  ((i in pm and (stackOprator[-1] in pm)) or (i in md and (stackOprator[-1] in md))):
                 stackOprand.append(stackOprator.pop())
                 stackOprator.append(i)
