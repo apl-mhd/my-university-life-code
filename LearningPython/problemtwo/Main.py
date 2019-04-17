@@ -10,56 +10,78 @@ opr = {}
 
 oprator =[]
 
-with open('op.txt','r') as  opr:
-
-    for i in opr:
-
-        i = i.replace('\n','')
-        oprator.append(i)
+result = []
 
 
 
-print(oprator)
 
+with open('result.txt', 'r') as rslt:
 
-def writeTOfile(wr):
-    with open('output.txt', 'a') as wrtf:
+        for i in rslt:
+            i = i.replace('\n','')
 
-        wrtf.write(str(wr)+'\n')
-
-
-with open('in.txt','r') as oprand:
-
-    j=0;
-
-    for i in  oprand:
-        i = i.replace('\n','')
-        x = i.split()
+            result.append(int(i))
 
 
 
-        if oprator[j] not  in alloprtr:
-           y= 'error input'
-
-        elif x[0] not in digitAll or x[1] not in digitAll:
-            y = 'error input'
-
-        elif oprator[j] == '+':
-            y = int(x[0]) + int(x[1])
 
 
-        elif oprator[j] == '-':
-            y = int(x[0]) - int(x[1])
 
 
-        elif oprator[j] == '*':
-            y = int(x[0]) * int(x[1])
 
 
-        elif oprator[j] == '/':
-            y = int(x[0]) / int(x[1])
 
-        writeTOfile(y)
+with open('ex.txt','r') as rexp:
+
+    j=0
+    sum=0
+
+    for i in  rexp:
+        i = i.replace('\n', '')
+
+        if i[-1] in alloprtr:
+
+            sum = 'error input'
+            print(sum)
+
+            continue
+
+
+        elif i[1] == '+':
+
+            sum =  int(i[0]) + int(i[2])
+
+
+
+        elif i[1] == '-':
+            sum = int(i[0]) - int(i[2])
+
+
+
+        elif i[1] == '*':
+            sum = int(i[0]) * int(i[2])
+
+
+
+        elif i[1] == '/':
+            sum = int(i[0]) / int(i[2])
+
+
+
+
+        sum = sum - result[j]
+
+        sum = pow(abs(sum),3)
+
+        print(sum)
 
         j +=1
+
+
+
+
+
+
+
+
 
