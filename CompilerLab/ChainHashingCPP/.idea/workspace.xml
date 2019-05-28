@@ -11,7 +11,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e788d2f-d0cb-4ac8-886c-3ea30f44c271" name="Default Changelist" comment="" />
+    <list default="true" id="5e788d2f-d0cb-4ac8-886c-3ea30f44c271" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../LearningPython/download/DailyStar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LearningPython/test/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LearningPython/test2/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LearningPython/yield/mai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LearningPython/problemtwo/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../LearningPython/problemtwo/Main.py" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +53,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1042">
+            <state relative-caret-position="15">
               <caret line="29" column="27" selection-start-line="29" selection-end-line="30" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
@@ -96,7 +102,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -168,11 +174,12 @@
       <workItem from="1553006774907" duration="715000" />
       <workItem from="1553046169317" duration="614000" />
       <workItem from="1553050619104" duration="1622000" />
+      <workItem from="1556272033868" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73781000" />
+    <option name="totallyTimeSpent" value="73787000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -237,7 +244,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1042">
+        <state relative-caret-position="15">
           <caret line="29" column="27" selection-start-line="29" selection-end-line="30" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
