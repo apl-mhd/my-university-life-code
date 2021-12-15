@@ -1,2 +1,0 @@
-SELECT  DAY (LAST_day(HIRE_DATE )), date_format(HIRE_DATE, '%d'), HIRE_DATE, DAY (LAST_day(HIRE_DATE ))- date_format(HIRE_DATE,'%d') +1 
-              FROM employees

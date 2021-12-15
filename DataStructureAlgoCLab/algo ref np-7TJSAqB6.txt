@@ -1,3 +1,0 @@
-http://naveenkandwal.blogspot.com/2015/01/p-np-np-complete-np-hard.htmlP class (Polynomial Time) 
-P is the set of all decision problems which can be solved in polynomial time by a deterministic Turing machine. Since it can solve in polynomial time, it can also be verified in polynomial time. Therefore P is a subset of NP.
-Algorithms that run in linear time (O(n)),quadratic time (O(n^2)),exponential time (O(2^n)), or even logarithmic time (O(log n)) are polynomial time algorithms.

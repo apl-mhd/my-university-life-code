@@ -1,0 +1,13 @@
+SELECT AVG(e1.SALARY), departments.DEPARTMENT_NAME
+
+FROM employees e1 JOIN departments ON departments.DEPARTMENT_ID = e1.DEPARTMENT_ID
+WHERE SALARY > ALL (
+
+    SELECT MIN(SALARY)
+    FROM employees e2
+    
+    GROUP BY e2.DEPARTMENT_ID
+
+)
+
+GROUP BY e1.DEPARTMENT_ID

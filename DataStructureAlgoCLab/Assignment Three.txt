@@ -1,0 +1,25 @@
+3.
+SELECT jobs.JOB_TITLE, employees.FIRST_NAME, (employees.SALARY- jobs.MIN_SALARY) as "Salary Difference"
+FROM employees
+
+JOIN jobs ON(employees.JOB_ID = jobs.JOB_ID);
+
+5.
+SELECT employees.EMPLOYEE_ID,datediff(job_history.END_DATE, job_history.START_DATE) AS 'Days' , jobs.JOB_TITLE
+
+FROM(( employees
+JOIN job_history ON (employees.EMPLOYEE_ID = job_history.EMPLOYEE_ID) 
+     AND  job_history.DEPARTMENT_ID = 90)
+JOIN jobs ON  job_history.JOB_ID = jobs.JOB_ID);
+              
+      
+7.SELECT  employees.LAST_NAME, employees.SALARY, jobs.JOB_TITLE 
+FROM employees
+INNER JOIN jobs ON employees.JOB_ID = jobs.JOB_ID;
+
+
+8.
+SELECT departments.DEPARTMENT_NAME,countries.COUNTRY_NAME
+FROM ((departments 
+JOIN locations on departments.LOCATION_ID = locations.LOCATION_ID)
+JOIN countries on locations.COUNTRY_ID = countries.COUNTRY_ID);

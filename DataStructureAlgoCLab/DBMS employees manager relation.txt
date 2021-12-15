@@ -1,0 +1,4 @@
+SELECT e1.EMPLOYEE_ID, e2.EMPLOYEE_ID 
+FROM
+employees e1 JOIN employees e2  
+on  e2.EMPLOYEE_ID = e1.MANAGER_ID;

@@ -1,0 +1,39 @@
+
+
+
+2.1 = e
+SELECT LOCATION_ID, concat(  concat(STREET_ADDRESS,','), concat(CITY,',') ,  concat(STATE_PROVINCE,','), POSTAL_CODE) as ADDRESS
+FROM locations;
+
+
+2.2 = e
+SELECT FIRST_NAME
+FROM employees WHERE FIRST_NAME LIKE  'a%n';
+
+
+2.2 = g
+
+SELECT FIRST_NAME, LAST_NAME
+FROM employees WHERE JOB_ID = 'AD_PRES' and SALARY >=23000;
+
+
+2.3 = a
+
+SELECT FIRST_NAME,LAST_NAME, COMMISSION_PCT
+FROM employees WHERE JOB_ID = 'AD_PRES'  ORDER BY COMMISSION_PCT ASC, SALARY DESC;
+
+3.1 = a
+SELECT  upper( concat( concat( substr(COUNTRY_NAME,1,3), ' '), substr(COUNTRY_NAME, length(COUNTRY_NAME)-2,length(COUNTRY_NAME)) )) as 'Country Name'
+FROM countries;
+
+3.2 = b
+SELECT LAST_NAME, TRUNCATE(datediff(curdate(), HIRE_DATE) / 365,3) as Years
+FROM employees;
+
+3.3  = b
+SELECT EMPLOYEE_ID,  DAY (LAST_day(HIRE_DATE ))- date_format(HIRE_DATE,'%d') +1 as 'Number of days work' FROM employees;
+
+
+3.5 = i
+SELECT date_format(HIRE_DATE, '%D %M, %Y')
+FROM employees;
