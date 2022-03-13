@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+
+    <div class="maindiv">
+
+        <div class="leftselect">
+
+            <form name="submit" action="job.php" method="get">
+
+                <input type="checkbox" name="job[]" value="IT_PROG"> I have a bike<br>
+                <input type="checkbox" name="job[]" value="FI_ACCOUNT" > I have a car<br>
+                <input type="checkbox" name="job[]" value="PU_CLERK"> I have a bike<br>
+                <input type="checkbox" name="job[]" value="ST_MAN" > I have a car<br>
+
+
+                <input type="submit" name="submit" value="Submit">
+
+            </form>
+
+
+        </div>
+        <div class="maincontent">
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+
+
+<?php
+/**
+ * Created by PhpStorm.
+ * User: apelmahmud
+ * Date: 02/04/2017
+ * Time: 3:24 PM
+ */
+
+//echo  $_GET['it'];
+
+$serverName = 'localhost';
+$dbName = 'abc';
+$uName = 'root';
+$pass = '';
+
+/*$itProg = $_GET['it'];
+
+echo  $itProg."</br>";*/
+
+
+/*
+for ($_GET['job'] as $key->$val){
+
+    //echo
+}*/
+
+$jobArray =  $_GET['job']; /*Select checkbox */
+
+
+foreach ($jobArray as  $key => $val) /* array convert*/
+    $arr2[$key] = $val;
+
+
+
+$in = join("','", $arr2); //join array
+
+//echo $in."<br>";
+
+
+$con =  new  mysqli($serverName,$uName,$pass,$dbName);
+
+if($con->connect_error)
+    die("connect fail".$con->connect_error);
+
+
+$sql  = "SELECT * FROM employees where  job_id in('$in')";
+
+$result = $con->query($sql);
+
+
+print_r( $result->fetch_assoc());
+echo "<br>";
+print_r( $result->fetch_assoc());
+
+
+echo  $result->num_rows;
+
+echo "<table border='1px solid gray'>
+
+        <tr> 
+        <th> Employees_id </th>
+        <th>First Name </th>
+        <th>Email </th>
+        <th>Phone Number </th>
+        <th>Job ID </th>
+        <th>Salary </th>
+        <th>Manager ID </th>
+        <th>Department ID </th>
+</tr>";
+
+while ($row = $result->fetch_assoc()){
+
+
+    echo "<tr> 
+
+      <td>".$row['EMPLOYEE_ID']."</td>
+      <td>".$row['FIRST_NAME']."</td>
+      <td>".$row['EMAIL']."</td>
+      <td>".$row['PHONE_NUMBER']."</td>
+      <td>".$row['JOB_ID']."</td>
+      <td>".$row['SALARY']."</td>
+      <td>".$row['MANAGER_ID']."</td>
+      <td>".$row['DEPARTMENT_ID']."</td>
+      
+
+    </tr>";
+}
+
+
+echo "</table>";
+
+
+
+
+
+$con->close();
+
+
+?>
+
+</body>
+</html>

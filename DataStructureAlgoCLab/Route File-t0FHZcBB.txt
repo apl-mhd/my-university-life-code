@@ -1,8 +1,0 @@
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'  ],function (){
-
-    Route::get('/create','FrontController@index');
-    Route::get('/about','FrontController@index');
-    Route::get('/logout','FrontController@index');
-    Route::get('/home','FrontController@index');
-
-});
